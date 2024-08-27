@@ -15,6 +15,11 @@ const products = [
           "Tak ve Şarj Et teknolojisi ile müdaheleye gerek kalmadan yüksek hızlı şarj imkanı sunar.",
           "40kW'a kadar yükseltilebilir modüler yapıya sahiptir.",
           "OCPP desteği ile kredi/banka kartı, RFID kart, NFC veya mobil ödeme yöntemleriyle temassız ve kolay bir ödeme deneyimi sunar. (opsiyonel)"
+        ],
+        "bodyEN": [
+          "Provides high-speed charging without the need for intervention with Plug and Charge technology.",
+          "It has a modular structure that can be upgraded up to 40kW.",
+          "Offers a contactless and easy payment experience with OCPP support via credit/debit cards, RFID cards, NFC, or mobile payment methods. (optional)"
         ]
       },
       {
@@ -26,6 +31,11 @@ const products = [
           "Tak ve Şarj Et teknolojisi ile müdaheleye gerek kalmadan yüksek hızlı şarj imkanı sunar.",
           "100kW'a kadar yükseltilebilir modüler yapıya sahiptir.",
           "OCPP desteği ile kredi/banka kartı, RFID kart, NFC veya mobil ödeme yöntemleriyle temassız ve kolay bir ödeme deneyimi sunar. (opsiyonel)"
+        ],
+        "bodyEN": [
+          "Provides high-speed charging without the need for intervention with Plug and Charge technology.",
+          "It has a modular structure that can be upgraded up to 100kW.",
+          "Offers a contactless and easy payment experience with OCPP support via credit/debit cards, RFID cards, NFC, or mobile payment methods. (optional)"
         ]
       },
       {
@@ -37,6 +47,11 @@ const products = [
           "Tak ve Şarj Et teknolojisi ile müdaheleye gerek kalmadan yüksek hızlı şarj imkanı sunar.",
           "Çift çıkış 2xCCS2 soketi ile eş zamanı şarj işlemi sağlar.",
           "OCPP desteği ile kredi/banka kartı, RFID kart, NFC veya mobil ödeme yöntemleriyle temassız ve kolay bir ödeme deneyimi sunar. (opsiyonel)"
+        ],
+        "bodyEN": [
+          "Provides high-speed charging without the need for intervention with Plug and Charge technology.",
+          "Allows simultaneous charging with dual output 2xCCS2 sockets.",
+          "Offers a contactless and easy payment experience with OCPP support via credit/debit cards, RFID cards, NFC, or mobile payment methods. (optional)"
         ]
       },
       {
@@ -48,6 +63,11 @@ const products = [
           "Tak ve Şarj Et teknolojisi ile müdaheleye gerek kalmadan yüksek hızlı şarj imkanı sunar.",
           "Çift çıkış 2xCCS2 soketi ile eş zamanı şarj işlemi sağlar.",
           "OCPP desteği ile kredi/banka kartı, RFID kart, NFC veya mobil ödeme yöntemleriyle temassız ve kolay bir ödeme deneyimi sunar. (opsiyonel)"
+        ],
+        "bodyEN": [
+          "Provides high-speed charging without the need for intervention with Plug and Charge technology.",
+          "Allows simultaneous charging with dual output 2xCCS2 sockets.",
+          "Offers a contactless and easy payment experience with OCPP support via credit/debit cards, RFID cards, NFC, or mobile payment methods. (optional)"
         ]
       },
       {
@@ -59,6 +79,11 @@ const products = [
           "Tak ve Şarj Et teknolojisi ile müdaheleye gerek kalmadan yüksek hızlı şarj imkanı sunar.",
           "Çift çıkış 2xCCS2 soketi ile eş zamanı şarj işlemi sağlar.",
           "OCPP desteği ile kredi/banka kartı, RFID kart, NFC veya mobil ödeme yöntemleriyle temassız ve kolay bir ödeme deneyimi sunar. (opsiyonel)"
+        ],
+        "bodyEN": [
+          "Provides high-speed charging without the need for intervention with Plug and Charge technology.",
+          "Allows simultaneous charging with dual output 2xCCS2 sockets.",
+          "Offers a contactless and easy payment experience with OCPP support via credit/debit cards, RFID cards, NFC, or mobile payment methods. (optional)"
         ]
       },
       {
@@ -71,6 +96,12 @@ const products = [
           "2 veya daha fazla şarj çıkışı verilebilir.",
           "Aynı sistem üzerinden hem CC2 hem de pantograf ile yüksek hızlı şarj imkanı sunar. (opsiyonel)",
           "OCPP desteği ile kredi/banka kartı, RFID kart, NFC veya mobil ödeme yöntemleriyle temassız ve kolay bir ödeme deneyimi sunar. (opsiyonel)"
+        ],
+        "bodyEN": [
+          "Provides high-speed charging without the need for intervention with Plug and Charge technology.",
+          "Can provide 2 or more charging outputs.",
+          "Allows high-speed charging with both CC2 and pantograph through the same system. (optional)",
+          "Offers a contactless and easy payment experience with OCPP support via credit/debit cards, RFID cards, NFC, or mobile payment methods. (optional)"
         ]
       },
       {
@@ -95,6 +126,12 @@ const products = [
           "2 veya daha fazla şarj çıkışı verilebilir.",
           "Aynı sistem üzerinden hem CC2 hem de pantograf ile yüksek hızlı şarj imkanı sunar. (opsiyonel)",
           "OCPP desteği ile kredi/banka kartı, RFID kart, NFC veya mobil ödeme yöntemleriyle temassız ve kolay bir ödeme deneyimi sunar. (opsiyonel)"
+        ],
+        "bodyEN": [
+          "When a single vehicle is connected to the system, it provides 200kW power; when two vehicles are connected, it provides simultaneous charging at 2x100kW.",
+          "Can provide 2 or more charging outputs.",
+          "Allows high-speed charging with both CC2 and pantograph through the same system. (optional)",
+          "Offers a contactless and easy payment experience with OCPP support via credit/debit cards, RFID cards, NFC, or mobile payment methods. (optional)"
         ]
       }
     ]    
@@ -122,6 +159,9 @@ const products = [
         images: ['/products/as-1000-serisi-1-10-kva-1-faz-giris-1-faz-cikis-hf-online-ups.jpg'],
         bodyTR: [
           'AS100O Serisi, PWM ve IGBT teknolojisi ile üretilmiş, sinüs dalga çıkışı veren ve gelişmiş haberleşme seçenekleri ile donatılmış, 1 faz giriş 1 faz çıkış online kesintisiz güç kaynaklarıdır. Farklı güç seçenekleriyle üretilen AS 1000 Serisi, yüksek koruma sağlayan teknolojisi sayesinde tıbbi tahlil cihazları, ameliyathaneler, ultrason cihazları, tomogra ve MR cihazları gibi tıbbi sistemler ile güvenlik sistemleri, otomasyon sistemleri, bilgisayar ağları, iletişim ve haberleşme sistemleri gibi önemli sistemleri elektrik kesintilerinden ve enerji dalgalanmalarından kaynaklanan sorunlara karşı korur, kesintisiz çalışmalarını sağlar.'
+        ],
+        bodyEN: [
+          'AS 1000 Series Online UPS uses all digital technology to protect your life-critical loads such as security systems, automation systems, computer networks, communication and communication systems from power outages and problems caused by power fluctuations. Tower and Rack type usage options provide great convenience in installations.'
         ]
       },
       {
@@ -131,6 +171,9 @@ const products = [
         images: ['/products/as-1000-serisi-1-10-kva-1-faz-giris-1-faz-cikis-hf-rack-tipi-online-ups.jpg'],
         bodyTR: [
           'AS 1000R Serisi Online UPS güvenlik sistemleri, otomasyon siste mleri, bilgisayar ağları, iletişim ve haberleşme sistemleri gibi hayatı önem taşıyan yüklerinizi elektrik kesintilerinden ve enerji dalgalanmalarından kaynaklan an sorunlara karşı korumak ve için dijital teknolojinin tüm kontrollerini kullanır . Kule ve Rack tipi kullanım seçenekleri montajlarda büyük kolaylık sağlar.'
+        ],
+        bodyEN: [
+          'AS 1000R Series Online UPS uses all digital technology to protect your life-critical loads such as security systems, automation systems, computer networks, communication and communication systems from power outages and problems caused by power fluctuations. Tower and Rack type usage options provide great convenience in installations.'
         ]
       },
       {
@@ -140,6 +183,9 @@ const products = [
         images: ['/products/as-1000-serisi-5-15-kva-1-faz-giris-1-faz-cikis-lf-online-ups.jpg'],
         bodyTR: [
           'AS 1000D Serisi ürünlerimiz, elektrik şebekenizin tek fazlı olduğu yerlerde tek fazlı kritik cihazlarınızı, elektrik kesintileri ve düzensizliklerinde güvenle kullanabilmenizi ve koruyabilmenizi sağlayan kesintisiz güç kaynaklarıdır. Mikroişlemci kontrollü, PWM ve IGBT teknolojisi ile donatılmış, galvanik izolasyon trafolu, paralellenebilir, iletişim portu, tam sinüs çıkışlı, online tipcihazlardır.Bilişim teknolojileri uygulamalarında, küçük ofislerde, servis sağlayıcı merkezlerde, iletişim ağlarında, kontrol cihazlarında, proses otomasyon vb. sistemleri ile bilgisayar ve donanımlar için özel olarak üretilmiş yüksek teknoloji içerikli ve güvenilirliğini kanıtlamış ürünlerdir.'
+        ],
+        bodyEN: [
+          'AS 1000D Series products are uninterruptible power supplies that allow you to safely use and protect your single-phase critical devices in places where your power grid is single-phase. Microprocessor controlled, PWM and IGBT technology, galvanic isolation transformer, parallelable, communication port, full sine wave output, online type devices. They are high technology content and reliable products specially produced for information technology applications, small offices, service provider centers, communication networks, control devices, process automation systems, computers and hardware.'
         ]
       },
       {
@@ -149,6 +195,9 @@ const products = [
         images: ['/products/as-2000-serisi-10-20-kva-3-faz-giris-1-faz-cikis-hf-online-ups.jpg'],
         bodyTR: [
           'AS 2000 Serisi, PWM ve IGBT teknolojisi ile üretilmiş, sinüs dalga çıkışı veren ve gelişmiş haberleşme seçenekleri ile donatılmış, 3 faz giriş 1 faz çıkış Online kesintisiz güç kaynaklarıdır. Farklı güç seçenekleri ile üretilen AS 2000 Serisi, mükemmel kalitesi ve güvenilir korumalar ile müşteri memnuniyeti sağlar.'
+        ],
+        bodyEN: [
+          'AS 2000 Series, PWM and IGBT technology, sine wave output and advanced communication options, 3 phase input 1 phase output Online uninterruptible power supplies. AS 2000 Series, produced with different power options, provides customer satisfaction with its excellent quality and reliable protections.'
         ]
       },
       {
@@ -158,6 +207,9 @@ const products = [
         images: ['/products/as-2000d-10-30-kva-3-faz-giris-1-faz-cikis-hf-online-ups.jpg'],
         bodyTR: [
           'AS 2000D Serisi ürünlerimiz, elektrik şebekenizin üç fazlı olduğu yerlerde tek fazlı kritik cihazlarınızı elektrik kesintileri ve düzensizliklerinde güvenle kullanabilmenizi ve koruyabilmenizi sağlayan kesintisiz güç kaynaklarıdır. DSP kontrollü, PWM ve IGBT teknolojisi ile donatılmış, tamsinüs çıkışlı, online tipte cihazlardır. Endüstriyel üretim makineleri, hastane ve görüntüleme cihazları, ağır sanayi makineleri, servis sağlayıcı, veri ve iletişim merkezleri için özel olarak üretilmiş yüksek teknoloji içerikli ve güvenilirliğini kanıtlamış ürünlerdir.'
+        ],
+        bodyEN: [
+          'AS 2000D Series products are uninterruptible power supplies that allow you to safely use and protect your single-phase critical devices in places where your power grid is three-phase. DSP controlled, PWM and IGBT technology, full sine wave output, online type devices. They are high technology content and reliable products specially produced for information technology applications, small offices, service provider centers, communication networks, control devices, process automation systems, computers and hardware.'
         ]
       },
       {
@@ -167,6 +219,9 @@ const products = [
         images: ['/products/as-3000-serisi-10-800-kva-3-faz-giris-3-faz-cikis-hf-online-ups.jpg'],
         bodyTR: [
           'AS3000 Serisi ürünlerimiz; elektrik şebekesinin üç fazlı olduğu yerlerde üç fazlı kritik cihazlarımızı elektrik kesintileri ve düzensizliklerinde güvenle kullanabilmenizi ve koruyabilmenizi sağlayan tipte kesintisiz güç kaynaklarıdır.','10-800 kVA aralığında çalışan mikroişlemci kontrollü ,PWM ve IGBT teknolojisi ile donatılmış, tam sinüs çıkışlı,çevrimiçi(online) tip cihazlardır. Endüstriyel üretim makineleri, hastane ve görüntüleme cihazları, ağır sanayi makinaları, servis sağlayıcı veri ve komünikasyon merkezleri için özel olarak üretilmiş yüksek teknoloji içerikli ve güvenirliğini kanıtlatmış ürünlerdir.'
+        ],
+        bodyEN: [
+          'AS 3000 Series products are uninterruptible power supplies that allow you to safely use and protect your three-phase critical devices in places where your power grid is three-phase. Microprocessor controlled, PWM and IGBT technology, full sine wave output, online type devices. They are high technology content and reliable products specially produced for information technology applications, small offices, service provider centers, communication networks, control devices, process automation systems, computers and hardware.'
         ]
       },
       {
@@ -176,6 +231,9 @@ const products = [
         images: ['/products/as-3000pf-serisi-10-800-kva-3-faz-giris-3-faz-cikis-hf-online-ups.jpg'],
         bodyTR: [
           'AS3000PF Serisi ürünlerimiz; elektrik şebekenizin üç fazlı olduğu yerlerde üç fazlı kritik cihazlarınızı elektrik kesintileri ve düzensizliklerinde güvenle kullanabilmenizi ve koruyabilmenizi sağlayan tipte kesintisiz güç kaynaklarıdır. 10-800 kVA 0,9 Güç faktörü ile çalışan mikroişlemci kontrollü, PWM ve IGBT teknolojisi ile donatılmış, tam sinüs çıkışlı, çevrimiçi (online) tip cihazlardır. Endistriyel üretim makinaları, hastane ve görüntüleme cihazları, ağır sanayi makinaları, servis sağlayıcı veri ve komünikasyon merkezleri için özel olarak üretilmiş yüksek teknoloji içerikli ve güvenirliğini kanıtlamış ürünlerdir.'
+        ],
+        bodyEN: [
+          'AS 3000PF Series products are uninterruptible power supplies that allow you to safely use and protect your three-phase critical devices in places where your power grid is three-phase. Microprocessor controlled, PWM and IGBT technology, full sine wave output, online type devices. They are high technology content and reliable products specially produced for information technology applications, small offices, service provider centers, communication networks, control devices, process automation systems, computers and hardware.'
         ]
       },
       {
@@ -185,6 +243,9 @@ const products = [
         images: ['/products/as-3000l-serisi-3-seviye-3l-yuksek-verimli-3-faz-giris-3-faz-cikis-online-ups.jpg'],
         bodyTR: [
           'AS3000L Serisi ürünlerimiz; elektrik şebekenizin üç fazlı olduğu yerlede üç fazlı kritik cihazlarınızı elektrik kesintileri ve düzensizliklerinde güvenle kullanabilmenizi ve koruyabilmemizi sağlayan tipte kesintisiz güç kaynaklarıdır. 3 seviyeli UPS Teknolojisi ile kullanan yüksek verimli AS300L ailesimikroişlemci kontrollü, PWM ve IGBT teknolojisi ile donatılmış, tam sinüs çıkışlı çevrimiçi (online)tip cihazlardır. Endüstriyel üretim makinaları, hastane ve görüntüleme cihazları, ağır sanayi makinaları, servis sağlayıcı veri ve komünikasyon merkezleri için özel olark üretilmiş yüksek teknoloji içerikli ve güvenirliği kanıtlanmış ürünlerdir.'
+        ],
+        bodyEN: [
+          'AS 3000L Series products are uninterruptible power supplies that allow you to safely use and protect your three-phase critical devices in places where your power grid is three-phase. 3-level UPS Technology with high efficiency AS300L family microprocessor controlled, PWM and IGBT technology, full sine wave output, online type devices. They are high technology content and reliable products specially produced for information technology applications, small offices, service provider centers, communication networks, control devices, process automation systems, computers and hardware.'
         ]
       },
       {
@@ -194,6 +255,9 @@ const products = [
         images: ['/products/as-4000-serisi-10-300-kva-3-faz-giris-3-faz-cikis-hf-online-trafolu-ups.jpg'],
         bodyTR: [
           'AS4000 Serisi ürünlerimiz; elektrik şebekesinin üç fazlı olduğu yerlerde üç fazlı kritik cihazlarımızı elektrik kesintileri ve düzensizliklerinde güvenle kullanabilmenizi ve koruyabilmenizi sağlayan tipte kesintisiz güç kaynaklarıdır.Mikroişlemci kontrollü ,PWM ve IGBT teknolojisi ile donatılmış, tam sinüs çıkışlı,çevrimiçi(online) tip cihazdır. Endüstriyel üretim makineleri, hastane ve görüntüleme cihazları, ağır sanayi makinaları, servis sağlayıcı veri ve komünikasyon merkezleri için özel olarak üretilmiş yüksek teknoloji içerikli ve güvenirliğini kanıtlatmış ürünlerdir.'
+        ],
+        bodyEN: [
+          'AS 4000 Series products are uninterruptible power supplies that allow you to safely use and protect your three-phase critical devices in places where your power grid is three-phase. Microprocessor controlled, PWM and IGBT technology, full sine wave output, online type devices. They are high technology content and reliable products specially produced for information technology applications, small offices, service provider centers, communication networks, control devices, process automation systems, computers and hardware.'
         ]
       },
       {
@@ -202,6 +266,9 @@ const products = [
         id: 'as-mod-modular-ups-serisi-10-1560-kva-3-faz-giris-3-faz-cikis-moduler-ups',
         images: ['/products/as-mod-modular-ups-serisi-10-1560-kva-3-faz-giris-3-faz-cikis-moduler-ups.jpg'],
         bodyTR: [
+          ''
+        ],
+        bodyEN: [
           ''
         ]
       }
@@ -221,6 +288,9 @@ const products = [
         images: ['/products/as-fc-3000-serisi-as-fc-3000m-marin-tip-frekans-konvertoru-3-faz-giris-3-faz-cikis-hf-400-hz.jpg'],
         bodyTR: [
           'Şebeke frekansına uyum sağlayamayan cihazların çalışması için şebeke ile cihaz arasında Frekans Konvertörü kullanılır. Tamamen statik elemanlarla çalıştığı için ekonomik ve teknolojik bir çözümdür. Verimi yüksek işletme maliyeti düşüktür. DSP ile yazılım kontrollü olup müşteri ihtiyaçları doğrultusunda cihaz özellikleri geliştirilebilir. Projeye özel olarak talep edildiğinde sistem içinde akü ilave edilerek şebeke kesintisinde bile çalışmaya devam edebilir. AS FC 3000 Serisi 50 Hz’den 60Hz’e veya 60Hz’den 50Hz’e dönüşüm için kullanılmalıdır. Frekans konvertörlerinin tipik kullanım alanları radarlar, silah sistemleri, özel tasarlanmış AC motorlar, marin ve şebekeye uyumlu olmayan ithal makinalardır.'
+        ],
+        bodyEN: [
+          'Frequency Converter is used between the grid and the device for the operation of devices that cannot adapt to the grid frequency. It is an economical and technological solution as it works entirely with static elements. It has high efficiency and low operating costs. It is software controlled with DSP and device features can be developed according to customer needs. When requested for a project, a battery can be added to the system and it can continue to operate even in case of a grid failure. AS FC 3000 Series should be used for conversion from 50 Hz to 60 Hz or from 60 Hz to 50 Hz. Typical applications of frequency converters are radars, weapon systems, specially designed AC motors, marine and imported machines that are not compatible with the grid.'
         ]
       },
       {
@@ -230,6 +300,9 @@ const products = [
         images: ['/products/as-fc-3000m-10-300-kva-marin-tip-3-faz-giris-3-faz-cikis-hf-400-hz.jpg'],
         bodyTR: [
           'Şebeke frekansına uyum sağlayamayan cihazların çalışması için şebeke ile cihaz arasında Frekans Konvertörü kullanılır. Tamamen statik elemanlarla çalıştığı için ekonomik ve teknolojik bir çözümdür. Verimi yüksek işletme maliyeti düşüktür. DSP ile yazılım kontrollü olup müşteri ihtiyaçları doğrultusunda cihaz özellikleri istenen değerlere ve proheye özel olarak geliştirilebilir. Sistem içinde akü ilave edilerek şebeke kesintisinde bile çalışmaya devam edebilir. AS FC 3000M Marin Tip Serisi 50 Hz’den 60Hz’e , 60Hz’den 50Hz’e veya 50/60Hz’den 400Hz’e dönüşüm için kullanılmakta olup özellike gemi,yat,römorkör, kesintisiz güç kaynağı, marina, liman, tersane,yüzer havuz gibi çeşitli alanlarda kullanılır.'
+        ],
+        bodyEN: [
+          'Frequency Converter is used between the grid and the device for the operation of devices that cannot adapt to the grid frequency. It is an economical and technological solution as it works entirely with static elements. It has high efficiency and low operating costs. It is software controlled with DSP and device features can be developed according to customer needs. When requested for a project, a battery can be added to the system and it can continue to operate even in case of a grid failure. AS FC 3000M Marine Type Series is used for conversion from 50 Hz to 60 Hz, 60 Hz to 50 Hz or 50/60 Hz to 400 Hz and is especially used in various areas such as ship, yacht, tugboat, uninterruptible power supply, marina, port, shipyard, floating pool.'
         ]
       },
       {
@@ -239,6 +312,9 @@ const products = [
         images: ['/products/as-fc-3000m-10-300-kva-3-faz-giris-3-faz-cikis-hf-400-hz.jpg'],
         bodyTR: [
           'Şebeke frekansına uyum sağlayamayan cihazlaron çalışması için şebeke ile cihaz arasında Frekans Konvertörü kullanılır. Tamamen statik elemanlarla çalıştığı için ekonomik ve teknolojik bir çözümdür. Verimi yüksek işletme maliyeti düşüktür. DSP ile yazılım kontrollü olup müşteri ihtiyaçları doğrultusunda cihaz özellikleri geliştirilebilir. Sistem içinde akü ilave edilerek şebeke kesintisinde bile çalışmaya devam edebilir. Şebeke frekansına uyum sağlayamayan cihazların çalışması için şebeke ile cihaz arasında Frekans Konvertörü kullanılır. Tamamen statik elemanlarla çalıştığı için ekonomik ve teknolojik bir çözümdür. Verimi yüksek işletme maliyeti düşüktür. DSP ile yazılım kontrollü olup müşteri ihtiyaçları doğrultusunda cihaz özellikleri geliştirilebilir. Sistem içinde akü ilave edilerek şebeke kesintisinde bile çalışmaya devam edebilir. AS FC 3000M Serisi özellikle marin ve ithal makinalar için gerekli olan 50/60Hz’den 400Hz’e dönüşüm için kullanılmalıdır. Frekans konvertörlerinin tipik kullanım alanları radarlar, silah sistemleri, özel tasarlanmış AC motorlar, marin ve şebekeye uyumlu olmayan ithal makinalardır.'
+        ],
+        bodyEN: [
+          'Frequency Converter is used between the grid and the device for the operation of devices that cannot adapt to the grid frequency. It is an economical and technological solution as it works entirely with static elements. It has high efficiency and low operating costs. It is software controlled with DSP and device features can be developed according to customer needs. When requested for a project, a battery can be added to the system and it can continue to operate even in case of a grid failure. Frequency Converter is used between the grid and the device for the operation of devices that cannot adapt to the grid frequency. It is an economical and technological solution as it works entirely with static elements. It has high efficiency and low operating costs. It is software controlled with DSP and device features can be developed according to customer needs. When requested for a project, a battery can be added to the system and it can continue to operate even in case of a grid failure. AS FC 3000M Series should be used for conversion from 50/60 Hz to 400 Hz, especially for marine and imported machines. Typical applications of frequency converters are radars, weapon systems, specially designed AC motors, marine and imported machines that are not compatible with the grid.'
         ]
       }
     ]
@@ -258,6 +334,10 @@ const products = [
         bodyTR: [
           'AS-REC 1000 Serisi Redresörler, akülerin şarj edilmesi ve doğru akımla beslenen cihazların DC enerji gereksinimleri için en güncel teknoloji ile tasarlanmıştır. Genel kullanım alanları telekomünikasyon merkezleri, enerji dağıtım istasyonları, deniz ve kara nakil araçları, endüstriyel ve askeri tesisler ile her türlü kullanılabilecekleri uygulamalarıdır.',
           'Redresörler tamamen elektronik yapıya sahip olup, tristörlü güç bölüm sayesinde çıkış akım ve gerilimlerini kontrol eder. En düşük dalgalılığı sağlamak için çıkış katı kondansatör ve şok bobinlerinden oluşan filtre ile donatılmıştır.'
+        ],
+        bodyEN: [
+          'AS-REC 1000 Series Rectifiers are designed with the latest technology for charging batteries and the DC energy requirements of devices powered by direct current. Their general areas of use are telecommunication centers, energy distribution stations, marine and land transport vehicles, industrial and military facilities, and all kinds of applications they can be used in.',
+          'Rectifiers are completely electronic and control output currents and voltages thanks to the thyristor power section. Equipped with a filter consisting of solid capacitors and choke coils to provide the lowest ripple.'
         ]
       },
       {
@@ -267,6 +347,9 @@ const products = [
         images: ['/products/3000-serisi-as-rec-3-faz-giris-aku-sarj-cihazi-redresor.jpg'],
         bodyTR: [
           'AS-REC Redresörler, akülerin şarj edilmesi ve doğru akımla beslenen cihazların DC enerji gereksinimleri için en güncel teknoloji ile tasarlanmıştır. Genel kullanım alanları telekomünikasyon merkezleri, enerji dağıtım istasyonları, deniz ve kara nakil araçları, endüstriyel ve askeri tesisler ile her türlü kullanılabilecekleri uygulamalardır. AS-REC 3000 serisi redresörler akım paylaşımlı olarak paralel çalışabilirler. Herhangi bir nedenle redresörlerden bir tanesi devre dışı kaldığında diğer redresör yük beslemeye devam eder, bu şekilde de yedekleme yapılırken paralel bağlı her iki cihazda eşit yaşlanma olur. Akım paylaşımı yapıldığında akım paylaşım farkı %5 in altında olmaktadır.'
+        ],
+        bodyEN: [
+          'AS-REC Rectifiers are designed with the latest technology for charging batteries and the DC energy requirements of devices powered by direct current. Their general areas of use are telecommunication centers, energy distribution stations, marine and land transport vehicles, industrial and military facilities, and all kinds of applications they can be used in. AS-REC 3000 series rectifiers can operate in parallel with current sharing. When one of the rectifiers is disabled for any reason, the other rectifier continues to supply the load, thus providing backup, and when parallel connected, both devices age equally. When current sharing is done, the current sharing difference is less than 5%.'
         ]
       }
     ]
@@ -286,6 +369,9 @@ const products = [
         bodyTR: [
           'AS-INV 1000 Serisi İnvertörler günlük hayatta ve iş hayatında kullanılan 12V,24V ve 48V akü geriliminden şebeke gerilimi oluşturan cihazlardır. Pratik kullanımları, çıkış izalasyon trafolu yapıları ve aküleri şarj edebilmesi sayesinde kara ve deniz araçlarında, açık alanlarda güvenle kullanırlar. Tam sinüs formunda sunurlar. Şebeke var iken aküler çıkış gerilimi oluşturduğu için bilgisayar,TV, buzdolabı, aydınlatma motor gibi her türlü yükte sorunsuz çözüm sunarlar.',
           'AS-INV 1000 serisi şebeke var iken giriş gerilimini çıkışa vererek yükleri besler ve dahili şarj ünitesi ile akülerini şarj eder. Şebeke gerilimi yok iken bu akülerden aldığı DC gerilimi AC gerilimize çevirerek yüklerinizi kesintisiz beslemeye devam eder ve Off-Line UPS gibi çalışabilir.'
+        ],
+        bodyEN: [
+          'AS-INV 1000 Series Inverters are devices that generate grid voltage from 12V, 24V and 48V battery voltage used in daily life and business life. They are safely used in land and sea vehicles, open areas with their practical use, output isolation transformer structures and the ability to charge batteries. They provide a smooth solution for all kinds of loads such as computers, TVs, refrigerators, lighting motors as they create output voltage in full sine form. AS-INV 1000 series feeds the loads by giving the input voltage to the output while the grid is available and charges its batteries with the internal charging unit. When there is no grid voltage, it continues to feed your loads uninterruptedly by converting the DC voltage it receives from these batteries to AC voltage and can work like an Off-Line UPS.'
         ]
       },
       {
@@ -297,6 +383,11 @@ const products = [
           'AS-INV 3000 Serisi İnvertörler, şebeke gerilimi ile aynı formda elektrik üreterek elektrikli aletlerin çalışmasını sağlayan gelişmiş güç kaynaklarıdır. İnvertörlerimiz, DSP (digital signal processor) teknolojisine sahip olup 12V, 24V, 48V, 60V,110VDC gibi akü gerilimlerinden istenilen frekanslarda 220/230/240 VAC şehir şebekesi gerilimi oluşturmaktadır.',
           'Bu İnvertörler, tam sinüs ürettikleri için her türlü elektrikli cihazı problemsiz olarak çalıştırabilirler. Enerji kaynağı olarak DC besleme gerilimi yani akü gerilimi kullanıldığından kara, deniz taşıtları, endüstriyel tesisler, demiryolları, askeri tesisler, Telekom santralleri, enerji üretim tesisleri gibi yerlerde şebeke yokken aküden besleme yaparak uzun süreli işletim sağlarlar. DSP teknolojisi sayesinde frekanslar çok hassas üretilmekte olup, aynı cihaz küçük bir yazılım değişikliği ile 50Hz, 60Hz, 83Hz ve 400Hz üretecek hale getirebilmektedir.',
           'Çeşitli besleme gerilimi ile çalışabilmeleri, 1kVA\'dan 20 kVA\'ya kadar standart güç seçenekleri, sessiz çalışmaları, mükemmel sinüs dalga formu ile her türlü teknik gereksinimi karşılayabilirler.',
+        ],
+        bodyEN: [
+          'AS-INV 3000 Series Inverters are advanced power sources that generate electricity in the same form as grid voltage to allow electrical appliances to operate. Our inverters have DSP (digital signal processor) technology and generate 220/230/240 VAC city grid voltage at desired frequencies from battery voltages such as 12V, 24V, 48V, 60V, 110VDC.',
+          'These inverters can operate any kind of electrical device smoothly because they produce full sine waves. Since DC supply voltage or battery voltage is used as the energy source, they provide long-term operation by feeding from the battery when there is no grid in places such as land, sea vehicles, industrial facilities, railways, military facilities, telecommunication centers, energy production facilities. Thanks to the DSP technology, frequencies are produced very sensitively, and the same device can be made to produce 50Hz, 60Hz, 83Hz and 400Hz with a small software change.',
+          'They can meet all kinds of technical requirements with their ability to operate with various supply voltages, standard power options from 1kVA to 20kVA, silent operation, and perfect sine wave form.'
         ]
       },
       {
@@ -307,6 +398,10 @@ const products = [
         bodyTR: [
           'AS-INV 3000 G Serisi Güneş Enerjisi ile beslenen ve ürettiği elektriği şebekeye aktarabilen bir cihazdır. AS-INV Serisi İnvertör FV panellerinden aldığı DC gerilimi 3 Faz şebeke formuna çevirerek ürettiği enerjiyi şebekeye verebilir. Yüksek verim ile daha fazla kazanç sağlar. Tamamen yerli tasarım ve üretim olup yasaların sağladığı destek ve hibelerden faydalanabilirsiniz.',
           'Dahili MPPT modülüne sahiptir. Panellerden MPPT (Maximum Power Point Tracking) algoritmasıyla güç çekilerek maksimum güç elde edilmektedir. Hava şartları, güneş açısı ve sıcaklık v.b gibi değişikliklerde güneş panellerinin Maksimum Güç Noktası (MPP) değişmektedir. MPPT algoritması sayesinde sürekli değişmekte olan MPP noktası bulunarak panel maksimum güçte çalıştırılır. Gelişmiş grafik tabanlı LCD tüm giriş-çıkış elektriksel değerlerini ve üretilen toplam elektrik enerjisini gösterir. İnvertörde son nesil 3 Seviyeli IGBT teknolojisi kullanılmakta olup DSP kontrollü olması sayesinde tüm kontroller yazılım tarafından gerçekleştirilmektedir.'
+        ],
+        bodyEN: [
+          'AS-INV 3000 G Series is a device powered by solar energy and can transfer the electricity it produces to the grid. AS-INV Series Inverter can convert the DC voltage it receives from PV panels into 3 Phase grid form and feed the energy it produces to the grid. It provides more profit with high efficiency. It is completely domestic design and production, and you can benefit from the support and grants provided by the laws.',
+          'It has an internal MPPT module. By pulling power from the panels with the MPPT (Maximum Power Point Tracking) algorithm, maximum power is obtained. Weather conditions, sun angle, temperature, etc. cause the Maximum Power Point (MPP) of the solar panels to change. Thanks to the MPPT algorithm, the constantly changing MPP point is found, and the panel is operated at maximum power. The advanced graphic-based LCD shows all input-output electrical values and the total electrical energy produced. The inverter uses the latest 3 Level IGBT technology and is DSP controlled, so all controls are performed by the software.'
         ]
       },
       {
@@ -317,6 +412,10 @@ const products = [
         bodyTR: [
           'AS-INV 3000 C Serisi Güneş Enerjisinin ürettiği elektriği şebekeye aktarmayı sağlayan bir cihazdır. AS-INV Serisi İnvertör FV panellerinden aldığı DC gerilimi 3 Faz şebeke formuna çevirerek ürettiği enerjiyi şebekeye verebilir. Yüksek verimi sayesinde sistemden daha fazla kazanç sağlamaya yardımcı olur. Tamamen yerli tasarım ve üretim olup yasaların sağladığı desteklerden faydalanabilirsiniz.',
           'Dahili MPPT modülüne sahiptir. Panellerden MPPT (Maximum Power Point Tracking) algoritmasıyla güç çekilerek maksimum güç elde edilmektedir. Hava şartları, güneş açısı ve sıcaklık v.b gibi değişikliklerde güneş panellerinin Maksimum Güç Noktası (MPP) değişmektedir. MPPT algoritması sayesinde sürekli değişmekte olan MPP noktası bulunarak panel maksimum güçte çalıştırılır. Gelişmiş grafik tabanlı LCD tüm giriş-çıkış elektriksel değerlerini ve üretilen toplam elektrik enerjisini gösterir. İnvertörde son nesil 3 Seviyeli IGBT teknolojisi kullanılmakta olup DSP kontrollü olması sayesinde tüm kontroller yazılım tarafından gerçekleştirilmektedir.'
+        ],
+        bodyEN: [
+          'AS-INV 3000 C Series is a device that transfers the electricity produced by solar energy to the grid. AS-INV Series Inverter can convert the DC voltage it receives from PV panels into 3 Phase grid form and feed the energy it produces to the grid. It helps to provide more profit from the system with its high efficiency. It is completely domestic design and production, and you can benefit from the supports provided by the laws.',
+          'It has an internal MPPT module. By pulling power from the panels with the MPPT (Maximum Power Point Tracking) algorithm, maximum power is obtained. Weather conditions, sun angle, temperature, etc. cause the Maximum Power Point (MPP) of the solar panels to change. Thanks to the MPPT algorithm, the constantly changing MPP point is found, and the panel is operated at maximum power. The advanced graphic-based LCD shows all input-output electrical values and the total electrical energy produced. The inverter uses the latest 3 Level IGBT technology and is DSP controlled, so all controls are performed by the software.'
         ]
       }
     ]
@@ -335,6 +434,9 @@ const products = [
         images: ['/products/as-srg-serisi-statik-gerilim-regulatoru.jpg'],
         bodyTR: [
           'AS-SRG Serisi Statik Voltaj Regülatörleri, bünyesinde hareketli parça içermeyen statik bir gerilim regülatörüdür. Gerilim regülasyonu tamamen mikroişlemci denetiminde dijital teknolojisiyle milisaniyeler mertebesinde gerçekleşir. Aşınacak, eskiyecek, bakım gerektirecek hiç bir parçası yoktur. Oysa klasik Servo motorlu voltaj regülatörlerinde ise motor kollektörleri,  değişken trafo fırçaları, fırça yatakları gibi mekanik sürünmeli parçalar hızlı bir aşınma gösterir. Yük altında sürekli çalışmada trafo yüzeyinde ısınma ve aşınmalar hatta gerilim kesintileri meydana gelir. ASPOWER statik voltaj regülatörleri, tamamen mikroişlemci denetimli, tristör kontrollü olup, kesintisiz güç kaynağı, dijital teknolojiyle çalışmaktadır. Şebeke geriliminin tehlikeli derecede düşük ve yüksek gelmesinde aşırı akım, aşırı ısı ve çıkış kısa devresi gibi anormal durumlarda kendisini ve beslediği yükü korur. Tüm güçlerde RFI ve EMI filtreleri standart olarak mevcuttur'
+        ],
+        bodyEN: [
+          'AS-SRG Series Static Voltage Regulators are static voltage regulators that do not contain any moving parts. Voltage regulation is carried out in milliseconds with digital technology under microprocessor control. It has no parts that will wear out, get old, or require maintenance. However, in classical Servo motor voltage regulators, mechanical sliding parts such as motor commutators, variable transformer brushes, brush bearings show rapid wear. Heating and wear on the transformer surface, and even voltage interruptions occur during continuous operation under load. ASPOWER static voltage regulators are completely microprocessor controlled, thyristor controlled, uninterruptible power supply, and work with digital technology. In case of dangerously low and high grid voltage, it protects itself and the load it feeds in abnormal situations such as overcurrent, overheating, and output short circuit. RFI and EMI filters are available as standard in all powers.'
         ]
       },
       {
@@ -367,6 +469,13 @@ const products = [
           'İnternet ve sens SMS bildirimine kalıcı bir bağlantı olmadığında izlemeyi mümkün kılmak için Modem veya GSM Modem\'e bağlanın.',
           'NetAgent II - 3Ports, sıcaklık, nem ve su koşullarını elde etmek için \'NetFeeler II\'ye bağlanmak için de kullanılabilir.',
           'Duman dedektörü durumunu almak için, Gaz dedektörü, kapı ve pencere dedektörü de mümkündür. Bu ürün "Contact Closure" ve "RS232" arabirimi UPS içindir'
+        ],
+        bodyEN: [
+          'NetAgent is a new generation SNMP (Simple Network Management Protocol) monitoring product.',
+          'NetAgent II - 3Ports can provide other functions, for example.',
+          'When there is no permanent connection to the Internet and sens SMS notification, connect to the Modem or GSM Modem to enable monitoring.',
+          'NetAgent II - 3Ports can also be used to connect to \'NetFeeler II\' to obtain temperature, humidity, and water conditions.',
+          'It is also possible to obtain the status of the Smoke detector, Gas detector, door and window detector. This product is for the "Contact Closure" and "RS232" interface UPS.'
         ]
       },
       {
@@ -376,6 +485,9 @@ const products = [
         images: ['/products/aku.jpg'],
         bodyTR: [
           'Aküler UPS (Kesintisiz Güç Kaynağı) Sistemi’nin en kritik elemanlarıdır. ASPOWER Enerji olarak her projeniz için özel olarak hesaplayarak sunduğumuz uluslararası standartlara uygun üretilmiş Bakımsız Kuru Tip, OPzS, Jel, Ni-Cd, Li-Ion gibi çeşitli model ve tipte aküler kullanılmaktadır.'
+        ],
+        bodyEN: [
+          'Batteries are the most critical elements of the UPS (Uninterruptible Power Supply) System. ASPOWER Enerji uses various models and types of batteries such as Maintenance-Free Dry Type, OPzS, Gel, Ni-Cd, Li-Ion, which are produced in accordance with international standards that we offer by calculating specifically for each of your projects.'
         ]
       }
     ]
