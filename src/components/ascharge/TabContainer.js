@@ -19,7 +19,7 @@ const TabContainer = ({locale}) => {
         {
           id: 1,
           attributes: {
-            href: '/products',
+            href: '/ascharge/products',
             width: 1000,
             height: 1000,
             name: 'image1',
@@ -32,7 +32,7 @@ const TabContainer = ({locale}) => {
         {
           id: 2,
           attributes: {
-            href: '/products',
+            href: '/ascharge/products',
             width: 1000,
             height: 1000,
             name: 'image1',
@@ -45,7 +45,7 @@ const TabContainer = ({locale}) => {
         {
           id: 3,
           attributes: {
-            href: '/products',
+            href: '/ascharge/products',
             width: 1000,
             height: 1000,
             name: 'image1',
@@ -58,7 +58,7 @@ const TabContainer = ({locale}) => {
         {
           id: 4,
           attributes: {
-            href: '/products',
+            href: '/ascharge/products',
             width: 1000,
             height: 1000,
             name: 'image1',
@@ -141,7 +141,7 @@ const TabContainer = ({locale}) => {
           </ConditionalLink>
         })}
       </div>
-      <Link href="/products"
+      <Link href="/ascharge/products"
         className={`transition-all tab-selector bg-sky-300 hover:bg-sky-200 p-2 px-8 xl:w-1/6 rounded-full self-start md:mx-10 xl:mx-20 mt-8`}
       >
         <h2 className="text-lg xl:text-2xl text-white mb-1 text-center">

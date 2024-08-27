@@ -43,7 +43,7 @@ const Contact = ({ locale }) => {
   };
 
   return (
-    <div id="contact" className="flex w-full flex-col">
+    <div id="contact" className="flex w-full flex-col xl:flex-row">
       <div
         style={{ backgroundImage: `url(/Refs/${partnership === "Lokasyon" ? 'lokasyon.jpg' : 'ticari.jpg'})` }}
         className="md:w-1/2 md:p-20 p-8 md:px-56 flex items-center justify-center contact-image">

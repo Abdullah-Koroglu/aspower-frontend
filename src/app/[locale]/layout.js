@@ -1,7 +1,9 @@
 import "./globals.css";
 // import { Providers } from "./Providers";
+import ContactButton from "@/components/ContactButton";
 import Footer from '@/components/Footer';
 import Navbar from "@/components/navbar/Navbar";
+
 
 // const myFont = localFont({ src: '../components/fonts/ClashDisplay-Variable.ttf' });
 
@@ -22,6 +24,7 @@ export default function RootLayout({ children, params }) {
           {children}
           <Footer locale={locale}/>
         </body>
+        <ContactButton />
       {/* </Providers> */}
     </html>
   );
