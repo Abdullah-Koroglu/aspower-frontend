@@ -91,10 +91,10 @@ const TabContainer = ({locale}) => {
               className={`transition-all relative tab-selector p-2 px-4 xl:px-8 xl:w-[calc(25%-2rem)] rounded-full ${tab.active === true ? 'bg-green-200 hover:bg-green-100' : 'bg-[#eff4f9] hover:opacity-70'} ${tab.active === true ? 'cursor-pointer' : 'cursor-default'} ${activeTab === tab.id ? '' : 'text-gray-400'}`}
               onClick={() => tab.active ? setActiveTab(tab.id) : null}
             >
-              <h2 className="text-base text-nowrap xl:text-2xl">
+              <h2 className="text-sm text-nowrap xl:text-2xl">
                 {locale === 'tr' ? tab.titleTR : tab.titleEN}
               </h2>
-              <div className={`text-sm xl:text-lg mb-1 absolute top-[-1rem] right-1 text-white bg-[#65d5ef] px-2 pb-1 rounded-full ${tab.active === true ? 'hidden' : 'block'}`}>
+              <div className={`text-xs xl:text-lg mb-1 absolute top-[-1rem] right-1 text-white bg-[#65d5ef] px-2 pb-1 rounded-full ${tab.active === true ? 'hidden' : 'block'}`}>
                 {currentLocale.soon}
               </div>
             </button>
@@ -107,7 +107,7 @@ const TabContainer = ({locale}) => {
   return (
     <div className="flex w-full items-center justify-center flex-col gap-4 p-4 mt-20">
       <TabSelector />
-      <div className="flex flex-col md:flex-row w-full md:gap-4 xl:gap-8 md:px-10 xl:px-20 justify-start">
+      <div className="flex flex-col md:flex-row w-full gap-4 xl:gap-8 md:px-10 xl:px-20 justify-start">
         {tabs?.[activeTab].content.map((image) => {
           const { width, height, name, url } = image.attributes
           return <ConditionalLink item={image.attributes} className={`rounded-2xl relative md:w-[calc(25%-.5rem)] overflow-hidden cursor-pointer overlay`}
