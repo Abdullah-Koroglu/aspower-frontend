@@ -7,12 +7,6 @@ Merhaba Emre Bey, diğer ilgililerimizin incelemesine istinaden aşağıdaki gib
 
 
 
-•	Whatsapp iletişim şeklinde bir kısım ekleyebilir miyiz? webde yuzen, mobilde navbarda
-•	Elektrikli araç şarj sistemi kısmı ile ascharge arasında bir bağlantı oluşturulmalıdır.
-
-
-
-
 
 products listesinde animasyon ver
 

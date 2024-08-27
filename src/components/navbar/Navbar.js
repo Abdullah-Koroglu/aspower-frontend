@@ -3,7 +3,7 @@ import React, { useState, useEffect } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { FaInstagram, FaFacebookF } from 'react-icons/fa';
-import { FaLinkedinIn, FaBars, FaTimes } from "react-icons/fa6";
+import { FaLinkedinIn, FaBars, FaWhatsapp } from "react-icons/fa6";
 import { IoMdClose } from "react-icons/io";
 import products from '@/data/productList';
 import locales from '@/locales';
@@ -217,6 +217,9 @@ const Navbar = ({ locale }) => {
           </Link>
           <Link className="bg-gray-200 rounded-full p-2" href="https://www.linkedin.com/company/aspower/">
             <FaLinkedinIn className='text-black' />
+          </Link>
+          <Link className="bg-gray-200 rounded-full p-2" href={'https://api.whatsapp.com/send?phone=1234567890'}>
+            <FaWhatsapp className='text-black' />
           </Link>
         </div>
         <div className="flex justify-center gap-4 py-4">
