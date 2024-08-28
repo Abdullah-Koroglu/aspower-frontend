@@ -13,6 +13,7 @@ const Banner = ({locale}) => {
         loop={true}
         autoPlay={true}
         muted={true}
+        playsInline={true}
       >
         <source
           src="/ASP-Hero-Video-WEB.mp4"
