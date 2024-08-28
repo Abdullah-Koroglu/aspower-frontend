@@ -50,7 +50,7 @@ const Contact = () => {
 
   async function POST() {
     try {
-      const res = await fetch(`${process.env.NEXT_PUBLIC_BACKEND_URL}/api/mail-subscribers`, {
+      const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/mail-subscribers`, {
         method: 'POST',
         mode: 'cors',
         headers: { "Content-Type": "application/json" },

@@ -22,7 +22,8 @@ const Contact = ({ locale }) => {
     e.preventDefault();
 
     try {
-      const response = await fetch(`${process.env.BACKEND_URL}/api/contact-email`, {
+      console.log(process.env.NEXT_PUBLIC_API_URL)
+      const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/contact-email`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

@@ -56,7 +56,7 @@ function Detail({ itemData, type, locale }) {
         </div>
       </div>
       {
-        (type !== 'blog' && isAscharge && (selectedCategory === 'dc-arac-sarj-sistemi' || selectedCategory === 'ac-arac-sarj-sistemi')) ?
+        (type !== 'blog' && !isAscharge && (selectedCategory === 'dc-arac-sarj-sistemi' || selectedCategory === 'ac-arac-sarj-sistemi')) ?
           <Link href="/ascharge" className="transition-all tab-selector flex bg-sky-300 hover:bg-sky-200 p-2 px-12 rounded-full w-fit ml-auto mr-auto mb-10">
             <h2 className="text-lg xl:text-2xl text-white mb-1 ">              {currentLocale.visitAscharge}</h2>
           </Link>
