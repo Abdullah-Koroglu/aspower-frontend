@@ -19,7 +19,7 @@ async function page() {
             ))}
           </div>
           <h2 className="text-2xl md:text-5xl sans w-2/3">Belgelerimiz</h2>
-          <div className="mt-10 mb-20">
+          <div className="mt-10 mb-20 flex flex-col">
             {pageData.data?.filter(item => item.attributes.tip === 'belge')?.map((item, index) => (
               <Link href={`${process.env.BACKEND_URL}${item.attributes.Dokuman.data.attributes.url}`} key={index} className="text-xl font-base mb-4 text-[#005770]">{item.attributes.Sertifika}</Link>
             ))}

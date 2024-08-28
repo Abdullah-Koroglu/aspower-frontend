@@ -128,7 +128,7 @@ const Navbar = ({ locale }) => {
 
   return (
     <div onMouseLeave={() => setMenuHoverItem('')} className={`flex w-full justify-center items-center z-10`}>
-      <div className="flex text-sm justify-between items-center border rounded-full p-4 px-8 top-4 absolute z-10 w-[calc(100%-4rem)]">
+      <div className="flex text-sm justify-between items-center border rounded-full p-4 px-4 md:px-8 top-4 absolute z-10 w-[calc(100%-2rem)] md:w-[calc(100%-4rem)]">
         <Link href="/">
           <Image alt="logo" className="w-32 xl:w-40" src="/logo-beyaz.svg" width={300} height={300} />
         </Link>
