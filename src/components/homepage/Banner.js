@@ -14,7 +14,7 @@ const Banner = ({locale}) => {
     },
     {
       id: 2,
-      image: 'Enerji-Depolama-Sistemleri.png',
+      image: 'Enerji-Depolama-Sistemleri.jpg',
       titleTR: 'Enerji Depolama Sistemleri',
       titleEN: 'Energy Storage Systems',
       captionTR: 'Yenilenebilir Enerji, Savunma Sanayi, Ulaştırma ve Havacılık sektörlerinde faaliyet gösteren Aspower, alanında uzman ve tecrübeli AR-GE mühendisleri, üretim ekibi ile proje ve yönetim kadrosu sayesinde sektördeki yenilikçi çözümlere hızlıca adapte olup hayata geçirmekte ve ileri seviye teknolojiler sunmaktadır.',

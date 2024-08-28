@@ -218,7 +218,10 @@ const Navbar = ({ locale }) => {
           <Link className="bg-gray-200 rounded-full p-2" href="https://www.linkedin.com/company/aspower/">
             <FaLinkedinIn className='text-black' />
           </Link>
-          <Link className="bg-gray-200 rounded-full p-2" href={'https://api.whatsapp.com/send?phone=905511086483'}>
+          <Link className="bg-gray-200 rounded-full p-2" href={
+            // 'https://api.whatsapp.com/send?phone=905511086483'
+            ''
+            }>
             <FaWhatsapp className='text-black' />
           </Link>
         </div>

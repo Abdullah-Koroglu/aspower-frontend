@@ -20,11 +20,10 @@ const Sections = ({locale}) => {
       id: 2,
       href: '/products',
       attributes: {
-        darkImage: true,
         width: 1200,
         height: 800,
         name: 'image2',
-        url: '/Enerji-Depolama-Sistemleri.png',
+        url: '/Enerji-Depolama-Sistemleri-2.jpg',
         titleTR: 'Enerji̇ Depolama Si̇stemleri̇',
         titleEN: 'Energy Storage Systems'
       }
