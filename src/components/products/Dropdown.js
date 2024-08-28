@@ -3,7 +3,7 @@ import Link from 'next/link';
 import React, { Fragment, useEffect, useState } from 'react'
 import { IoIosArrowDown, IoIosArrowUp } from "react-icons/io";
 
-function Dropdown({ data, setData, isAscharge, selectedCategory, setSelectedCategory, locale }) {
+function Dropdown({ data, setData, isAscharge, selectedCategory, setSelectedCategory, locale, isDetail }) {
   const [dropdownAscharge, setDropdownAscharge] = useState(isAscharge);
   const [dropdownVisible, setDropdownVisible] = useState(false);
   
@@ -67,8 +67,12 @@ function Dropdown({ data, setData, isAscharge, selectedCategory, setSelectedCate
                 className={`p-4 border-b border-x border-[#EFF4F9] bg-white text-[#005770] ${product.passive ? 'cursor-not-allowed text-[#ACC2C6] bg-[#F8FAFB]' : 'hover:bg-[#EFF4F9] hover:text-[#003B4D] cursor-pointer'}`}
                 onClick={() => {
                   if (product.passive !== true) {
-                    setSelectedCategory(product.id);
-                    setDropdownVisible(false);
+                    if (isDetail) {
+                     window.location = `${dropdownAscharge ? '/ascharge' : ''}/products#${product.id}`; 
+                    } else {
+                      setSelectedCategory(product.id);
+                      setDropdownVisible(false);
+                    }
                   }
                 }}
               >

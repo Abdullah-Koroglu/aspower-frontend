@@ -15,3 +15,14 @@ products listesinde animasyon ver
 satis nasil gerceklescek
 isleri kim nasi alcak
 AI
+
+dondurerek koy resimi (mobil sarz)
+navbari genislet
+kvkk icin link koy
+hamburger mobile menunun ustunde gozuke
+
+
+katalog
+resim degisimi
+whatsapp numarasi
+mail nereden nereye atilacak

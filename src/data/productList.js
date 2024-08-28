@@ -84,7 +84,7 @@ const products = [
           "Provides high-speed charging without the need for intervention with Plug and Charge technology.",
           "Allows simultaneous charging with dual output 2xCCS2 sockets.",
           "Offers a contactless and easy payment experience with OCPP support via credit/debit cards, RFID cards, NFC, or mobile payment methods. (optional)"
-        ]
+        ],
       },
       {
         "titleTR": "AS EVC 480 kW Hızlı Şarj Sistemi",

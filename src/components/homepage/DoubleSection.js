@@ -54,7 +54,7 @@ const DoubleSection = ({ locale }) => {
           <div
             className="flex gap-8 px-8 py-8"
           >
-            {blogs.map((blog, index) => <div className="w-[20rem] md:w-[22rem] xl:w-[30rem] drop-shadow-xl rounded-3xl bg-white p-8 pb-8 md:pb-12 flex flex-col" key={index}>
+            {blogs.map((blog, index) => <div className="w-[20rem] md:w-[22rem] xl:w-[30rem] drop-shadow-xl rounded-3xl bg-white p-4 pb-4 md:pb-12 md:p-8 flex flex-col" key={index}>
               <Image
                 className={`w-full h-56 rounded-lg`}
                 alt="image1"
@@ -69,13 +69,13 @@ const DoubleSection = ({ locale }) => {
               <Link className="transition-all self-end mt-auto p-2 px-12 pb-3 rounded-full bg-[#C5EAC7] hover:bg-[#c5eac7b7] text-[#111B2D] text-lg xl:text-2xl" href={`/blogs/${blog.id}`}>
                 {currentLocale.continue}
               </Link>
-            </div>)}
-
+            </div>
+            )}
           </div>
         </div>
 
         <div className="flex justify-center mt-8 mb-12">
-          <div onClick={scrollLeft} className="transition-all tab-selector flex items-center justify-center bg-white hover:bg-[#ffffffa1] p-2 h-12 w-12  rounded-full mr-4 select-none">
+          <div onClick={scrollLeft} className="hidden xl:flex transition-all tab-selector items-center justify-center bg-white hover:bg-[#ffffffa1] p-2 h-12 w-12  rounded-full mr-4 select-none">
             <h2 className="text-lg xl:text-2xl text-[#ACC2C6]">
               <MdOutlineArrowBackIos />
             </h2>
@@ -83,7 +83,7 @@ const DoubleSection = ({ locale }) => {
           <Link href="/blogs" className="transition-all tab-selector bg-sky-300 hover:bg-sky-200 p-2 px-12 rounded-full">
             <h2 className="text-lg xl:text-2xl text-white mb-1">              {currentLocale.viewAll}</h2>
           </Link>
-          <div onClick={scrollRight} className="transition-all tab-selector flex items-center justify-center bg-white hover:bg-[#ffffffa1] p-2 h-12 w-12 rounded-full ml-4">
+          <div onClick={scrollRight} className="hidden xl:flex transition-all tab-selector items-center justify-center bg-white hover:bg-[#ffffffa1] p-2 h-12 w-12 rounded-full ml-4">
             <h2 className="text-lg xl:text-2xl text-[#ACC2C6]">
               <MdOutlineArrowForwardIos />
             </h2>

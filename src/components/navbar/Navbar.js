@@ -127,7 +127,7 @@ const Navbar = ({ locale }) => {
   }, [isMenuOpen]);
 
   return (
-    <div onMouseLeave={() => setMenuHoverItem('')} className="flex w-full justify-center items-center z-10">
+    <div onMouseLeave={() => setMenuHoverItem('')} className={`flex w-full justify-center items-center z-10`}>
       <div className="flex text-sm justify-between items-center border rounded-full p-4 px-8 top-4 absolute z-10 w-[calc(100%-4rem)]">
         <Link href="/">
           <Image alt="logo" className="w-32 xl:w-40" src="/logo-beyaz.svg" width={300} height={300} />
@@ -218,11 +218,11 @@ const Navbar = ({ locale }) => {
           <Link className="bg-gray-200 rounded-full p-2" href="https://www.linkedin.com/company/aspower/">
             <FaLinkedinIn className='text-black' />
           </Link>
-          <Link className="bg-gray-200 rounded-full p-2" href={'https://api.whatsapp.com/send?phone=1234567890'}>
+          <Link className="bg-gray-200 rounded-full p-2" href={'https://api.whatsapp.com/send?phone=905511086483'}>
             <FaWhatsapp className='text-black' />
           </Link>
         </div>
-        <div className="flex justify-center gap-4 py-4">
+        <div className="flex justify-center gap-4 py-4 mb-12">
           <div
             className={`px-2 border-r-2 border-gray-400 ${locale !== 'tr' ? 'text-gray-500' : 'text-black font-medium'} cursor-pointer`}
             onClick={() => { handleLanguageChange('tr'); setIsMenuOpen(false); }}

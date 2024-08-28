@@ -22,7 +22,7 @@ const Contact = ({ locale }) => {
     e.preventDefault();
 
     try {
-      const response = await fetch('http://localhost:1337/api/contact-email', {
+      const response = await fetch(`${process.env.BACKEND_URL}/api/contact-email`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -46,22 +46,22 @@ const Contact = ({ locale }) => {
     <div id="contact" className="flex w-full flex-col xl:flex-row">
       <div
         style={{ backgroundImage: `url(/Refs/${partnership === "Lokasyon" ? 'lokasyon.jpg' : 'ticari.jpg'})` }}
-        className="md:w-1/2 md:p-20 p-8 md:px-56 flex items-center justify-center contact-image">
+        className="xl:w-1/2 p-8 py-32 md:p-20 md:px-56 flex items-center justify-center contact-image">
         <div className="contact-overlay-color" />
         <div className="md:w-full p-8 md:p-16 drop-shadow-lg rounded-3xl flex flex-col justify-center items-center gap-8 bg-[#111B2D] text-white">
           <div className="flex border-2 border-white rounded-full">
             <div
               onClick={() => setPartnership('Lokasyon')}
-              className={`transition p-1 px-4 md:px-16 rounded-full cursor-pointer ${partnership === 'Lokasyon' ? 'bg-white text-cyan-950' : ''}`}>
+              className={`transition p-1 px-4 xl:px-16 rounded-full cursor-pointer ${partnership === 'Lokasyon' ? 'bg-white text-cyan-950' : ''}`}>
               {currentLocale.location}
             </div>
             <div
               onClick={() => setPartnership('Ticari')}
-              className={`transition p-1 px-4 md:px-16 rounded-full cursor-pointer ${partnership !== "Lokasyon" ? 'bg-white text-cyan-950' : ''}`}>
+              className={`transition p-1 px-4 xl:px-16 rounded-full cursor-pointer ${partnership !== "Lokasyon" ? 'bg-white text-cyan-950' : ''}`}>
               {currentLocale.commercial}
             </div>
           </div>
-          <h3 className="text-2xl font-light mb-0">{currentLocale.partnership}</h3>
+          <h3 className="text-lg xl:text-2xl font-light mb-0">{currentLocale.partnership}</h3>
           <Link
             href={"maintenance"}
             className={`transition-all tab-selector bg-sky-300 hover:bg-sky-200 p-1 md:p-2 px-10 md:px-16 self-center rounded-full`}
@@ -72,8 +72,8 @@ const Contact = ({ locale }) => {
           </Link>
         </div>
       </div>
-      <div className="md:w-1/2 bg-slate-50 md:p-20 p-8 md:px-56 flex items-center justify-center">
-        <div className="w-full p-8 md:p-16 drop-shadow-lg rounded-3xl flex flex-col justify-center bg-white">
+      <div className="xl:w-1/2 bg-slate-50 xl:p-20 p-4 xl:px-56 flex items-center justify-center">
+        <div className="w-full p-8 px-6 md:px-16 md:p-16 drop-shadow-lg rounded-3xl flex flex-col justify-center bg-white">
           <h3 className="w-full border-b border-black text-center mb-8">
             {currentLocale.contact_form}
           </h3>

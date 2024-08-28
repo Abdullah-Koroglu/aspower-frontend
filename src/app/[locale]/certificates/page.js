@@ -3,9 +3,7 @@ import Link from 'next/link'
 import React from 'react'
 
 async function page() {
-  // const data = await fetch('http://localhost:1337/api/certificates').then((res) =>
-
-  const data = await fetch('http://0.0.0.0:1337/api/certificates?populate=Dokuman')
+  const data = await fetch('${process.env.BACKEND_URL}/api/certificates?populate=Dokuman')
   const pageData = await data.json()
 
 

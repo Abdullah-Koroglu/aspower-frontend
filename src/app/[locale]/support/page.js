@@ -44,7 +44,7 @@ const page = ({params}) => {
 
     // Send the POST request
     try {
-      const response = await fetch('http://localhost:1337/api/support-email', {
+      const response = await fetch(`${process.env.BACKEND_URL}/api/support-email`, {
         method: 'POST',
         body: form,
       });

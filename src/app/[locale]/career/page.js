@@ -53,7 +53,7 @@ const page = ({ params }) => {
 
     // Send the POST request
     try {
-      const response = await fetch('http://localhost:1337/api/career-email', {
+      const response = await fetch(`${process.env.BACKEND_URL}/api/career-email`, {
         method: 'POST',
         body: form,
       });

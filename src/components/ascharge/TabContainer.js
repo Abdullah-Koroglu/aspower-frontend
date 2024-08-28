@@ -12,7 +12,7 @@ const TabContainer = ({locale}) => {
   const tabs = {
     dc: {
       id: 'dc',
-      titleTR: 'DC Hızlı Sarj Sislemleri',
+      titleTR: 'DC Hızlı Şarj Sistemleri',
       titleEN: 'DC Fast Charging Systems',
       active: true,
       content: [
@@ -25,7 +25,7 @@ const TabContainer = ({locale}) => {
             name: 'image1',
             url: '/Refs/cihaz-gorselleri/20-40KW.png',
             title: '20-40KW',
-            subheaderTR: 'Hızlı Sarj Sistemleri',
+            subheaderTR: 'Hızlı Şarj Sistemleri',
             subheaderEN: 'Fast Charging Systems'
           }
         },
@@ -38,7 +38,7 @@ const TabContainer = ({locale}) => {
             name: 'image1',
             url: '/Refs/cihaz-gorselleri/60-100KW.png',
             title: '60-100KW',
-            subheaderTR: 'Hızlı Sarj Sistemleri',
+            subheaderTR: 'Hızlı Şarj Sistemleri',
             subheaderEN: 'Fast Charging Systems'
           }
         },
@@ -51,7 +51,7 @@ const TabContainer = ({locale}) => {
             name: 'image1',
             url: '/Refs/cihaz-gorselleri/120-360KW.png',
             title: '120-360KW',
-            subheaderTR: 'Hızlı Sarj Sistemleri',
+            subheaderTR: 'Hızlı Şarj Sistemleri',
             subheaderEN: 'Fast Charging Systems'
           }
         },
@@ -64,7 +64,7 @@ const TabContainer = ({locale}) => {
             name: 'image1',
             url: '/Refs/cihaz-gorselleri/480-800KW.png',
             title: '480-800KW',
-            subheaderTR: 'Hızlı Sarj Sistemleri',
+            subheaderTR: 'Hızlı Şarj Sistemleri',
             subheaderEN: 'Fast Charging Systems'
           }
         }
@@ -72,7 +72,7 @@ const TabContainer = ({locale}) => {
     },
     ac: {
       id: 'ac',
-      titleTR: 'AC Sarj Sistemleri',
+      titleTR: 'AC Şarj Sistemleri',
       titleEN: 'AC Charging Systems',
       active: false,
       content: []

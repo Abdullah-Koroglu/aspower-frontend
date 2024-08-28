@@ -14,7 +14,7 @@ const DownloadCatalogue = ({locale}) => {
     setFormData({ ...formData, language: e.target.value });
   }
   return (
-    <div className="flex flex-col-reverse md:flex-row items-center justify-center w-full h-full p-4 md:p-10 xl:p-20">
+    <div className="flex flex-col-reverse md:flex-row items-center justify-center w-full h-full mb-12 p-4 md:p-10 xl:p-20">
       <div className="md:w-1/2">
         <h2 className="text-xl md:text-2xl xl:text-4xl font-medium mt-8 md:mt-0">
           {currentLocale.discoverCatalogues}
@@ -43,11 +43,11 @@ const DownloadCatalogue = ({locale}) => {
             <label className={`cursor-pointer transition-all text-base xl:text-lg font-medium ${formData.language === 'ru' ? '' : 'text-[#ACC2C6]'}`} htmlFor="family">{currentLocale.languageRU}</label>
           </div>
         </div>
-        <p className="text-[#ACC2C6] text-xs">
+        <p className="text-[#ACC2C6] text-xs mt-2">
           {currentLocale.selectLanguage}
         </p>
         <button
-          className={`transition-all tab-selector bg-sky-300 hover:bg-sky-200 p-2 px-10 xl:px-16 self-center rounded-full mt-4 xl:mt-14`}
+          className={`transition-all tab-selector bg-sky-300 hover:bg-sky-200 p-2 px-10 xl:px-16 self-center rounded-full mt-14`}
         >
           <h2 className="text-lg xl:text-2xl text-white mb-1">
             {currentLocale.download}

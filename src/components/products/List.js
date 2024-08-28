@@ -14,9 +14,13 @@ function List({ type, locale }) {
   const [isAscharge, setIsAscharge] = useState(false)
 
   const [selectedCategory, setSelectedCategory] = useState('dc-arac-sarj-sistemi')
-  const RenderItem = ({ title, image, id }) => {
+  const RenderItem = ({ title, image, id, category }) => {
     return (
-      <Link key={id} href={`${isAscharge ? '/ascharge' : ''}/${type}s/${id}`} className={`transition-all ${type === 'product' ? 'w-full md:w-[calc(33%-2rem)]' : 'w-full md:w-[calc(25%-2rem)]'} h-fit rounded-lg aspect-square hover:opacity-80`}>
+      <Link 
+        key={id} 
+        href={`${isAscharge ? '/ascharge' : ''}/${type}s/${id}${category ? `#${category}` : ''}`} 
+        className={`transition-all ${type === 'product' ? 'w-full md:w-[calc(33%-2rem)]' : 'w-full md:w-[calc(25%-2rem)]'} h-fit rounded-lg aspect-square hover:opacity-80`}
+      >
         <div
           style={{ backgroundImage: `url(${image})` }}
           className="bg-gray-200  rounded-lg flex contact-image aspect-square">
@@ -55,7 +59,7 @@ function List({ type, locale }) {
       <div id='list' className="transition-all pt-20 md:px-20 px-4 flex flex-col md:flex-row gap-8 mb-20 self-center">
         {
           type === 'product' ?
-            <div className="md:w-[calc(33%)] md:max-w-[calc(22%-2rem)] overflow-hidden rounded-xl cursor-pointer ">
+            <div className="md:w-[calc(33%)] md:max-w-[calc(22%-2rem)] overflow-hidden rounded-xl cursor-pointer">
               <Dropdown isAscharge={isAscharge} data={pageData} setData={setPageData} selectedCategory={selectedCategory} setSelectedCategory={setSelectedCategory} locale={locale} />
             </div>
             : null
@@ -68,6 +72,7 @@ function List({ type, locale }) {
                   <RenderItem
                     title={locale === 'tr' ? item.titleTR : item.titleEN}
                     id={item.id}
+                    category={selectedCategory}
                     image={item.images[0]}
                   // image={'/placeholder.png'}
                   />
@@ -85,13 +90,6 @@ function List({ type, locale }) {
           }
         </div>
       </div>
-      {
-        type === 'product' && isAscharge ?
-          <Link href="/ascharge" className="transition-all tab-selector flex bg-sky-300 hover:bg-sky-200 p-2 px-12 rounded-full w-fit ml-auto mr-auto mb-20">
-            <h2 className="text-lg xl:text-2xl text-white mb-1 ">              {currentLocale.visitAscharge}</h2>
-          </Link>
-          : null
-      }
     </>
   )
 }
