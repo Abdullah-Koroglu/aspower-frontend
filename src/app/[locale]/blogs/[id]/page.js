@@ -5,14 +5,16 @@ import Detail from '@/components/products/Detail'
 import blogs from '@/data/blogs';
 import React from 'react'
 
-function page({params}) {
+async function page({params}) {
   const {locale, id} = params;
   const currentLocale = locales[locale];
-  const blog = findBlog(blogs, id);
+  const data = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/blogs?filters[slug][$eq]=${params.id}&locale=${params.locale}&populate=banner`)
+  const pageData = await data.json()
+
   return (
     <div>
       <Banner text={currentLocale.news}/>
-      <Detail itemData={blog} type="blog" locale={locale}/>
+      <Detail itemData={pageData.data?.[0]} type="blog" locale={locale}/>
     </div>
   )
 }

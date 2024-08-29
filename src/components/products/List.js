@@ -3,18 +3,18 @@ import Link from 'next/link'
 import React, { useState, useEffect } from 'react'
 import { useParams } from 'next/navigation'
 import productsData from '@/data/productList'
-import blogsData from '@/data/blogs'
-import locales from '@/locales'
 import Dropdown from './Dropdown'
 
 
-function List({ type, locale }) {
-  const currentLocale = locales[locale]
-  const [pageData, setPageData] = useState(type === 'product' ? productsData : blogsData)
+
+function List({ type, locale, pageData }) {
+  // const [pageData, setPageData] = useState(type === 'product' ? productsData : blogsData)
   const [isAscharge, setIsAscharge] = useState(false)
 
   const [selectedCategory, setSelectedCategory] = useState('dc-arac-sarj-sistemi')
   const RenderItem = ({ title, image, id, category }) => {
+    const imageURL = `${process.env.NEXT_PUBLIC_API_URL}${image?.data?.attributes?.url}`;
+    console.log(imageURL)
     return (
       <Link 
         key={id} 
@@ -22,7 +22,7 @@ function List({ type, locale }) {
         className={`transition-all ${type === 'product' ? 'w-full md:w-[calc(33%-2rem)]' : 'w-full md:w-[calc(25%-2rem)]'} h-fit rounded-lg aspect-square hover:opacity-80`}
       >
         <div
-          style={{ backgroundImage: `url(${image})` }}
+          style={{ backgroundImage: `url(${imageURL})` }}
           className="bg-gray-200  rounded-lg flex contact-image aspect-square">
           {/* <div className="h-1/6 text-center mt-[-3rem]  bg-[#005770] text-white"> */}
           <h2 className="truncate self-end w-full p-4 text-lg bg-[#005770] text-white rounded-b-lg">
@@ -79,11 +79,12 @@ function List({ type, locale }) {
                 )
               }) :
               pageData.map(item => {
+                const {Title, slug, banner} = item.attributes;
                 return (
                   <RenderItem
-                    title={locale === 'tr' ? item.titleTR : item.titleEN}
-                    id={item.id}
-                    image={item.image}
+                    title={Title}
+                    id={slug}
+                    image={banner}
                   />
                 )
               })
