@@ -1,4 +1,5 @@
 'use client'
+import Image from 'next/image';
 import React, { useEffect, useState } from 'react';
 
 const Banner = ({locale}) => {
@@ -57,9 +58,15 @@ const Banner = ({locale}) => {
           <div
             key={slide.id}
             className={`h-[80vh] md:h-screen text-white flex items-end md:items-start justify-start p-8 md:px-10 xl:px-20 transition-all duration-500 absolute w-full ${index === currentSlide ? '' : 'opacity-0'}`}
-            style={{ backgroundImage: `url(${slide.image})`, backgroundSize: 'cover' }}
           >
-            <div className="w-full xl:w-1/4 md:mt-[60vh] xl:mt-[30vh] 2xl:mt-[30vh]">
+            <Image
+              className="object-cover absolute top-0 left-0 w-full h-full"
+              src={`/${slide.image}`}
+              alt={slide.titleTR}
+              layout="fill"
+              objectFit="cover"
+            />
+            <div className="w-full xl:w-1/4 md:mt-[60vh] xl:mt-[30vh] 2xl:mt-[50vh] z-50">
               <h1 className="text-3xl md:text-4xl md:font-light md:max-w-[70%]">{locale === 'tr' ? slide.titleTR : slide.titleEN}</h1>
               <p className="text-xl font-light hidden md:block">{locale === 'tr' ? slide.captionTR : slide.captionEN}</p>
             </div>
