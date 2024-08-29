@@ -1,7 +1,7 @@
 const products = [
   {
     id: 'dc-arac-sarj-sistemi',
-    href: '/products#dc-arac-sarj-sistemi',
+    href: '/products?category=dc-arac-sarj-sistemi',
     image: '/products/as-evc-20-40-kw-hizli-sarj-sistemi.jpg',
     titleTR: 'DC Araç Şarj Sistemi',
     titleEN: 'DC Vehicle Charging System',
@@ -138,7 +138,7 @@ const products = [
   },
   {
     id: 'ac-arac-sarj-sistemi',
-    href: '/products#ac-arac-sarj-sistemi',
+    href: '/products?category=ac-arac-sarj-sistemi',
     image: 'ac-arac-sarj-sistemi.jpg',
     titleTR: 'AC Araç Şarj Sistemi',
     titleEN: 'AC Vehicle Charging System',
@@ -147,7 +147,7 @@ const products = [
   },
   {
     id: 'kesintisiz-guc-kaynagi',
-    href: '/products#kesintisiz-guc-kaynagi',
+    href: '/products?category=kesintisiz-guc-kaynagi',
     image: '/products/as-1000-serisi-1-10-kva-1-faz-giris-1-faz-cikis-hf-online-ups.jpg',
     titleTR: 'Kesintisiz Güç Kaynağı',
     titleEN: 'Uninterruptible Power Supply',
@@ -276,7 +276,7 @@ const products = [
   },
   {
     id: 'frekans-konvertoru',
-    href: '/products#frekans-konvertoru',
+    href: '/products?category=frekans-konvertoru',
     image: '/products/as-fc-3000-serisi-as-fc-3000m-marin-tip-frekans-konvertoru-3-faz-giris-3-faz-cikis-hf-400-hz.jpg',
     titleTR: 'Frekans Konvertörü',
     titleEN: 'Frequency Converter',
@@ -321,7 +321,7 @@ const products = [
   },
   {
     id: 'redresor-aku-sarj-cihazi',
-    href: '/products#redresor-aku-sarj-cihazi',
+    href: '/products?category=redresor-aku-sarj-cihazi',
     image: '/products/1000-serisi-as-rec-1-faz-giris-aku-sarj-cihazi-redresor.jpg',
     titleTR: 'Redresör - Akü Şarj Cihazı',
     titleEN: 'Rectifier - Battery Charger',
@@ -356,7 +356,7 @@ const products = [
   },
   {
     id: 'invertorler',
-    href: '/products#invertorler',
+    href: '/products?category=invertorler',
     image: '/products/as-inv-1000-serisi-1-6-kw-off-grid-sarjli-invertor.jpg',
     titleTR: 'İnvertörler',
     titleEN: 'Inverters',
@@ -422,7 +422,7 @@ const products = [
   },
   {
     id: 'regulatorler',
-    href: '/products#regulatorler',
+    href: '/products?category=regulatorler',
     image: '/products/as-srg-serisi-statik-gerilim-regulatoru.jpg',
     titleTR: 'Regülatörler',
     titleEN: 'Regulators',
@@ -452,7 +452,7 @@ const products = [
   },
   {
     id: 'aku-ve-aksesuarlar',
-    href: '/products#aku-ve-aksesuarlar',
+    href: '/products?category=aku-ve-aksesuarlar',
     image: '/products/aksesuar.jpg',
     titleTR: 'Akü ve Aksesuarlar',
     titleEN: 'Battery and Accessories',
@@ -494,7 +494,7 @@ const products = [
   },
   {
     id: 'ozel-cozumler',
-    href: '/products#ozel-cozumler',
+    href: '/products?category=ozel-cozumler',
     image: '/products/ozel-cozumler.jpg',
     titleTR: 'Özel Çözümler',
     titleEN: 'Special Solutions',

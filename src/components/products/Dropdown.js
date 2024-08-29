@@ -8,6 +8,8 @@ function Dropdown({ data, setData, isAscharge, selectedCategory, setSelectedCate
   const [dropdownVisible, setDropdownVisible] = useState(false);
   
   useEffect(() => {
+    console.log(selectedCategory);
+    
     const router = window?.location;
     const location = router.href.replace(router.origin, '');
 
@@ -22,7 +24,7 @@ function Dropdown({ data, setData, isAscharge, selectedCategory, setSelectedCate
   return (
     <div>
       {/* Desktop View */}
-      <div className="hidden xl:block">
+      <div className="hidden lg:block">
         {data.map((product, index) => (
           <div key={product.id} className="">
             <div
@@ -37,7 +39,7 @@ function Dropdown({ data, setData, isAscharge, selectedCategory, setSelectedCate
             {product.id === selectedCategory && (
               <div className="hidden md:flex flex-col">
                 {product.items.map(item => (
-                  <Link href={`${dropdownAscharge ? '/ascharge' : ''}/products/${item.id}`} className="truncate">
+                  <Link href={`${dropdownAscharge ? '/ascharge' : ''}/products/${item.id}?category${selectedCategory}`} className="truncate">
                     <div className="transition-all truncate bg-white hover:bg-[#EFF4F9] border-[#EFF4F9] border-2 border-t-0 px-6 py-2 text-[#005770] text-base">
                       {locale === 'tr' ? item.titleTR : item.titleEN}
                     </div>
@@ -50,7 +52,7 @@ function Dropdown({ data, setData, isAscharge, selectedCategory, setSelectedCate
       </div>
 
       {/* Mobile View */}
-      <div className="flex xl:hidden flex-col">
+      <div className="flex lg:hidden flex-col">
         <div
           className="p-4 flex items-center justify-between border-2 bg-[#b4e1e1] border-[#B4E1E1] text-[#005770] font-semibold"
           onClick={() => setDropdownVisible(!dropdownVisible)}
@@ -68,7 +70,7 @@ function Dropdown({ data, setData, isAscharge, selectedCategory, setSelectedCate
                 onClick={() => {
                   if (product.passive !== true) {
                     if (isDetail) {
-                     window.location = `${dropdownAscharge ? '/ascharge' : ''}/products#${product.id}`; 
+                     window.location = `${dropdownAscharge ? '/ascharge' : ''}/products?category=${product.id}`; 
                     } else {
                       setSelectedCategory(product.id);
                       setDropdownVisible(false);
