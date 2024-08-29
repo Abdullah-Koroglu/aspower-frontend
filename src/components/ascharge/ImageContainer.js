@@ -19,7 +19,7 @@ const ImageContainer = ({ locale }) => {
         <div className="w-96 text-white">
           <h2 className="mb-8 text-2xl xl:text-5xl">{locale === 'tr' ? data.titleTR : data.titleEN}</h2>
           <p className="text-sm mb-8">{locale === 'tr' ? data.descriptionTR : data.descriptionEN}</p>
-          <Link href="/products" className={`text-lg md:text-2xl text-white transition-all tab-selector bg-sky-300 hover:bg-sky-200 p-2 px-12 md:px-20 rounded-full self-start my-16 mt-8`}>{currentLocale.review}</Link>
+          <Link href="/ascharge/products" className={`text-lg md:text-2xl text-white transition-all tab-selector bg-sky-300 hover:bg-sky-200 p-2 px-12 md:px-20 rounded-full self-start my-16 mt-8`}>{currentLocale.review}</Link>
         </div>
       </div>
     </div>

@@ -3,7 +3,7 @@ import React, { useState, useEffect } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { FaInstagram, FaFacebookF } from 'react-icons/fa';
-import { FaLinkedinIn, FaBars, FaWhatsapp } from "react-icons/fa6";
+import { FaLinkedinIn, FaBars, FaWhatsapp, FaXTwitter } from "react-icons/fa6";
 import { IoMdClose } from "react-icons/io";
 import products from '@/data/productList';
 import locales from '@/locales';
@@ -187,6 +187,9 @@ const Navbar = ({ locale }) => {
           <Link className="bg-white rounded-full p-2" href="https://www.linkedin.com/company/aspower/">
             <FaLinkedinIn className='text-black' />
           </Link>
+          <Link className="bg-white rounded-full p-2" href="https://x.com/AspowerEnerji">
+            <FaXTwitter className='text-black' />
+          </Link>
         </div>
       </div>
       <div className={`transition-all duration-300 ${isMenuOpen ? 'top-0' : 'top-[calc(-100vh-3rem)]'} md:hidden flex flex-col w-full h-[100vh] absolute bg-white p-4 text-black z-50`}>
@@ -217,6 +220,9 @@ const Navbar = ({ locale }) => {
           </Link>
           <Link className="bg-gray-200 rounded-full p-2" href="https://www.linkedin.com/company/aspower/">
             <FaLinkedinIn className='text-black' />
+          </Link>
+          <Link className="bg-gray-200 rounded-full p-2" href="https://x.com/AspowerEnerji">
+            <FaXTwitter className='text-black' />
           </Link>
           <Link className="bg-gray-200 rounded-full p-2" href={
             // 'https://api.whatsapp.com/send?phone=905511086483'

@@ -47,18 +47,17 @@ const Contact = ({ locale }) => {
     <div id="contact" className="flex w-full flex-col xl:flex-row">
       <div
         style={{ backgroundImage: `url(/Refs/${partnership === "Lokasyon" ? 'lokasyon.jpg' : 'ticari.jpg'})` }}
-        className="xl:w-1/2 p-8 py-32 md:p-20 md:px-56 flex items-center justify-center contact-image">
-        <div className="contact-overlay-color" />
+        className="xl:w-1/2 p-8 py-32 md:p-20 md:px-30 lg:px-36 2xl:px-56 flex items-center justify-center contact-image">
         <div className="md:w-full p-8 md:p-16 drop-shadow-lg rounded-3xl flex flex-col justify-center items-center gap-8 bg-[#111B2D] text-white">
           <div className="flex border-2 border-white rounded-full">
             <div
               onClick={() => setPartnership('Lokasyon')}
-              className={`transition p-1 px-4 xl:px-16 rounded-full cursor-pointer ${partnership === 'Lokasyon' ? 'bg-white text-cyan-950' : ''}`}>
+              className={`transition p-1 px-4 2xl:px-12 rounded-full cursor-pointer ${partnership === 'Lokasyon' ? 'bg-white text-cyan-950' : ''}`}>
               {currentLocale.location}
             </div>
             <div
               onClick={() => setPartnership('Ticari')}
-              className={`transition p-1 px-4 xl:px-16 rounded-full cursor-pointer ${partnership !== "Lokasyon" ? 'bg-white text-cyan-950' : ''}`}>
+              className={`transition p-1 px-4 2xl:px-12 rounded-full cursor-pointer ${partnership !== "Lokasyon" ? 'bg-white text-cyan-950' : ''}`}>
               {currentLocale.commercial}
             </div>
           </div>
@@ -73,7 +72,7 @@ const Contact = ({ locale }) => {
           </Link>
         </div>
       </div>
-      <div className="xl:w-1/2 bg-slate-50 xl:p-20 p-4 xl:px-56 flex items-center justify-center">
+      <div className="xl:w-1/2 bg-slate-50 xl:p-20 p-4 md:px-30 lg:px-36 2xl:px-44 flex items-center justify-center">
         <div className="w-full p-8 px-6 md:px-16 md:p-16 drop-shadow-lg rounded-3xl flex flex-col justify-center bg-white">
           <h3 className="w-full border-b border-black text-center mb-8">
             {currentLocale.contact_form}

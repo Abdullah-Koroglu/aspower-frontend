@@ -3,7 +3,9 @@ import Link from 'next/link'
 import React from 'react'
 
 async function page() {
-  const data = await fetch(`${process.env.BACKEND_URL}/api/certificates?populate=Dokuman`)
+  console.log(`${process.env.NEXT_PUBLIC_API_URL}/api/certificates?populate=Dokuman`);
+  
+  const data = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/certificates?populate=Dokuman`)
   const pageData = await data.json()
 
 
@@ -15,13 +17,13 @@ async function page() {
           <h2 className="text-2xl md:text-5xl sans w-2/3">Sertifikalarımız</h2>
           <div className="mt-10 mb-20 flex flex-col">
             {pageData.data?.filter(item => item.attributes.tip === 'sertifika')?.map((item, index) => (
-              <Link href={`${process.env.BACKEND_URL}${item.attributes.Dokuman.data.attributes.url}`} key={index} className="text-xl font-base mb-4 text-[#005770]">{item.attributes.Sertifika}</Link>
+              <Link target="_blank" rel="noopener noreferrer" href={`${process.env.BACKEND_URL}${item.attributes.Dokuman.data.attributes.url}`} key={index} className="text-xl font-base mb-4 text-[#005770]">{item.attributes.Sertifika}</Link>
             ))}
           </div>
           <h2 className="text-2xl md:text-5xl sans w-2/3">Belgelerimiz</h2>
           <div className="mt-10 mb-20 flex flex-col">
             {pageData.data?.filter(item => item.attributes.tip === 'belge')?.map((item, index) => (
-              <Link href={`${process.env.BACKEND_URL}${item.attributes.Dokuman.data.attributes.url}`} key={index} className="text-xl font-base mb-4 text-[#005770]">{item.attributes.Sertifika}</Link>
+              <Link target="_blank" rel="noopener noreferrer" href={`${process.env.BACKEND_URL}${item.attributes.Dokuman.data.attributes.url}`} key={index} className="text-xl font-base mb-4 text-[#005770]">{item.attributes.Sertifika}</Link>
             ))}
           </div>
         </div>
