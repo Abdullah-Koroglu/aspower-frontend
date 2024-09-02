@@ -84,8 +84,8 @@ export default function Footer({ locale }) {
           </div>
         </div>
       </div>
-      <div className="footer flex items-end flex-wrap overflow-hidden text-neutral-300 font-medium px-4 md:px-8 lg:px-16 3xl:w-2/3 mx-auto pb-8 pt-8">
-        <Image alt="logo" className="w-28 md:w-40" src="/logo-beyaz.svg" width={300} height={300} />
+      <div className="footer flex items-center flex-wrap overflow-hidden text-neutral-300 font-medium px-4 md:px-8 lg:px-16 3xl:w-2/3 mx-auto pb-8 pt-8">
+        <Image alt="logo" className="w-28 md:w-40" src="/logo-renkli.png" width={300} height={300} />
         <div className="ml-4 text-xs xl:text-base">© Aspower 2024. {currentLocale.preserved}</div>
       </div>
       <div className="footer flex justify-center items-center flex-wrap overflow-hidden text-neutral-300 font-medium px-4 md:px-8 lg:px-16 3xl:w-2/3 mx-auto pb-8 pt-8 bg-[#0e1524]">

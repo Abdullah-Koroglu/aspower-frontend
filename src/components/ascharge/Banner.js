@@ -26,7 +26,7 @@ const Banner = ({locale}) => {
             {currentLocale.electric_vehicle_charging_systems}
           </h2>
         </div>
-        <div className="z-10 text-right flex flex-col gap-16 self-end">
+        <div className="z-10 text-right hidden md:flex flex-col gap-16 self-end">
           <div>
             <h className="mb-0 text-3xl md:text-5xl">{currentLocale.wide}</h>
             <h3 className="mb-0 text-lg md:text-2xl">{currentLocale.wide_product_range}</h3>

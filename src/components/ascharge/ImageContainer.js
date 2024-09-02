@@ -14,8 +14,8 @@ const ImageContainer = ({ locale }) => {
   }
 
   return (
-    <div style={{ backgroundImage: `url(${data.image})`, backgroundSize: 'cover', backgroundPosition: 'center center' }} className="flex justify-between gap-4 p-4 pt-10 md:max-xl:px-10 xl:pt-24">
-      <div className="flex items-end gap-8 justify-between xl:p-16 max-md:pb-96 max-xl:pb-32">
+    <div style={{ backgroundSize: 'cover', backgroundPosition: 'center center' }} className="bg-[url('/Refs/mobil-sarj-araci-mobil.jpg')] md:bg-[url('/Refs/mobil-sarj-araci.png')] flex justify-between gap-4 p-4 pt-10 md:max-xl:px-10 xl:pt-24">
+      <div className="flex items-end gap-8 justify-between xl:p-16 max-md:pb-[38rem] max-xl:pb-32">
         <div className="w-96 text-white">
           <h2 className="mb-8 text-2xl xl:text-5xl">{locale === 'tr' ? data.titleTR : data.titleEN}</h2>
           <p className="text-sm mb-8">{locale === 'tr' ? data.descriptionTR : data.descriptionEN}</p>
