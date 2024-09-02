@@ -70,7 +70,7 @@ export default function Footer({ locale }) {
               Tel: +90 212 955 00 00
             </p>
             <p>
-              Fax: +90 212 955 00 01
+              Faks :+90 850 255 16 30 
             </p>
             <p>
               Web: www.aspower.com.tr
