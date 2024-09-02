@@ -6,13 +6,13 @@ import blogsData from '@/data/blogs'
 import locales from '@/locales'
 import Dropdown from './Dropdown'
 import { useSearchParams } from 'next/navigation'
-
+import { usePathname } from 'next/navigation'
 
 function List({ type, locale }) {
   const searchParams = useSearchParams()
   const category = searchParams.get('category')
+  const pathname = usePathname();
 
-  const currentLocale = locales[locale]
   const [pageData, setPageData] = useState(type === 'product' ? productsData : blogsData)
   const [isAscharge, setIsAscharge] = useState(false)
 
@@ -38,12 +38,7 @@ function List({ type, locale }) {
   }
 
   useEffect(() => {
-    const hash = window.location.hash
-    const router = window?.location;
-
-    const location = router.href.replace(router.origin, '');
-
-    let locationArray = location.split('/')
+    let locationArray = pathname.split('/')
     locationArray = locationArray.filter((item) => item !== '');
 
     if (category) {
@@ -53,7 +48,7 @@ function List({ type, locale }) {
 
     if (locationArray[0] === 'ascharge' || locationArray[1] === 'ascharge') {
       setIsAscharge(true)
-      setPageData(pageData.slice(0, 2));
+      setPageData(pageData.slice(0, 3));
     }
   }, [])
 

@@ -139,11 +139,32 @@ const products = [
   {
     id: 'ac-arac-sarj-sistemi',
     href: '/products?category=ac-arac-sarj-sistemi',
-    image: 'ac-arac-sarj-sistemi.jpg',
+    image: '/products/as-evc-ac-sarj-sistemleri-yakinda.png',
     titleTR: 'AC Araç Şarj Sistemi',
     titleEN: 'AC Vehicle Charging System',
     passive: true,
     items: [  ]
+  },
+  {
+    id: 'mobil-sarj-sistemi',
+    href: '/products?category=mobil-sarj-sistemi',
+    image: '/products/as-evc-1150m.png',
+    titleTR: ' Mobil Şarj Sistemi',
+    titleEN: 'Mobile Charging System',
+    items: [
+      {
+        titleTR: 'AS EVC 1150M',
+        titleEN: 'AS EVC 1150M',
+        id: 'as-evc-1150m',
+        images: ['/products/as-evc-1150m.png', '/products/as-evc-1150m-1.png', '/products/as-evc-1150m-2.png', '/products/as-evc-1150m-3.png', '/products/as-evc-1150m-4.png'],
+        bodyTR: [
+          ''
+        ],
+        bodyEN: [
+          ''
+        ]
+      }
+    ]
   },
   {
     id: 'kesintisiz-guc-kaynagi',

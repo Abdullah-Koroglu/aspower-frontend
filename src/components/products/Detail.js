@@ -5,7 +5,7 @@ import Dropdown from './Dropdown';
 import products from '@/data/productList';
 import locales from '@/locales';
 import Link from 'next/link';
-import { useSearchParams } from 'next/navigation';
+import { usePathname, useSearchParams } from 'next/navigation';
 
 
 function Detail({ itemData, type, locale }) {
@@ -17,18 +17,12 @@ function Detail({ itemData, type, locale }) {
   const [data, setData] = useState(products)
   const [selectedCategory, setSelectedCategory] = useState('dc-arac-sarj-sistemi');
   const { titleTR, titleEN, bodyTR, bodyEN, images } = itemData;
+  const pathname = usePathname();
 
   const body =  locale === 'tr' ? bodyTR: bodyEN;
 
   useEffect(() => {
-    const router = window?.location;
-    const location = router.href.replace(router.origin, '');
-    const hash = window.location.hash
-
-    console.log({hash});
-    
-
-    let locationArray = location.split('/')
+    let locationArray = pathname.split('/')
     locationArray = locationArray.filter((item) => item !== '');
 
     if (locationArray[0] === 'ascharge' || locationArray[1] === 'ascharge') {

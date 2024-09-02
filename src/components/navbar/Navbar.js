@@ -7,6 +7,7 @@ import { FaLinkedinIn, FaBars, FaWhatsapp, FaXTwitter } from "react-icons/fa6";
 import { IoMdClose } from "react-icons/io";
 import products from '@/data/productList';
 import locales from '@/locales';
+import { usePathname } from 'next/navigation';
 
 const Navbar = ({ locale }) => {
   const currentLocale = locales[locale];
@@ -17,26 +18,21 @@ const Navbar = ({ locale }) => {
   const [menuDetailImage, setMenuDetailImage] = useState(defaultImage);
 
   const handleProductsMenuItems = () => {
-    const router = window?.location;
-    const location = router.href.replace(router.origin, '');
+    const pathname = usePathname();
 
-    let locationArray = location.split('/')
+    let locationArray = pathname.split('/')
     locationArray = locationArray.filter((item) => item !== '');
     if (locationArray[0] === 'ascharge' || locationArray[1] === 'ascharge') {
-      return products[0].items.map(item => {
-        const href = `/ascharge${products[0].href}`
-        return { ...item, image: item.images[0], href }
-      })
+      return products.slice(0, 3).map(category => ({ ...category, href: `/ascharge/products?category=${category.id}` }))
     } else {
       productsLink = '/products';
-
       return products.filter(category => category.passive !== true)
     }
   }
 
   const menuDetailData = {
     products: {
-      items: window ? handleProductsMenuItems() : [],
+      items: handleProductsMenuItems(),
       showImage: true
     },
     enterprise: {
@@ -62,9 +58,7 @@ const Navbar = ({ locale }) => {
   }
 
   const handleLanguageChange = (langValue) => {
-    const router = window?.location;
-    const location = router.href.replace(router.origin, '');
-    let locationArray = location.split('/')
+    let locationArray = pathname.split('/')
     locationArray = locationArray.filter((item) => item !== '');
 
     if (locale === 'tr') {
@@ -91,9 +85,9 @@ const Navbar = ({ locale }) => {
               menuDetailData[menuHoverItem]?.items.map((item, index) => (
                 <Link
                   onMouseEnter={() => { setMenuDetailImage(item.image) }}
-                  className="text-[#ACC2C6] hover:text-[#005770]"
+                  className={`text-[#ACC2C6] ${item.passive === true ? 'cursor-not-allowed' : 'cursor-pointer hover:text-[#005770]'}`}
                   key={index}
-                  href={item.href}
+                  href={item.passive !== true ? item.href : {}}
                 >
                   {locale === 'tr' ? item.titleTR : item.titleEN}
                 </Link>

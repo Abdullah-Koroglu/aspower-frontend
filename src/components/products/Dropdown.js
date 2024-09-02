@@ -1,23 +1,21 @@
 'use client'
 import Link from 'next/link';
+import { usePathname } from 'next/navigation';
 import React, { Fragment, useEffect, useState } from 'react'
 import { IoIosArrowDown, IoIosArrowUp } from "react-icons/io";
 
 function Dropdown({ data, setData, isAscharge, selectedCategory, setSelectedCategory, locale, isDetail }) {
   const [dropdownAscharge, setDropdownAscharge] = useState(isAscharge);
   const [dropdownVisible, setDropdownVisible] = useState(false);
+  const pathname = usePathname();
   
   useEffect(() => {
-    console.log(selectedCategory);
-    
-    const router = window?.location;
-    const location = router.href.replace(router.origin, '');
 
-    let locationArray = location.split('/')
+    let locationArray = pathname.split('/')
     locationArray = locationArray.filter((item) => item !== '');
 
     if (locationArray[0] === 'ascharge' || locationArray[1] === 'ascharge') {
-      setData(data.slice(0, 2));
+      setData(data.slice(0, 3));
       setDropdownAscharge(true);
     }
   }, [])
