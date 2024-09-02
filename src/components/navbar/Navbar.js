@@ -225,7 +225,7 @@ const Navbar = ({ locale }) => {
             <FaWhatsapp className='text-black' />
           </Link>
         </div>
-        <div className="flex justify-center gap-4 py-4 mb-12">
+        <div className="flex justify-center gap-4 py-4 mb-20">
           <div
             className={`px-2 border-r-2 border-gray-400 ${locale !== 'tr' ? 'text-gray-500' : 'text-black font-medium'} cursor-pointer`}
             onClick={() => { handleLanguageChange('tr'); setIsMenuOpen(false); }}

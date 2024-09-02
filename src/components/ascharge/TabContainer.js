@@ -105,7 +105,7 @@ const TabContainer = ({locale}) => {
   }
 
   return (
-    <div className="flex w-full items-center justify-center flex-col gap-4 p-4 mt-20">
+    <div className="flex w-full items-center justify-center flex-col gap-4 p-4 mt-10 md:mt-20">
       <TabSelector />
       <div className="flex flex-col md:flex-row w-full gap-4 xl:gap-8 md:px-10 xl:px-20 justify-start">
         {tabs?.[activeTab].content.map((image) => {
