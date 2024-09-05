@@ -18,7 +18,7 @@ const Sections = ({locale}) => {
     },
     {
       id: 2,
-      href: '/products',
+      href: '/products?category=redresor-aku-sarj-cihazi',
       attributes: {
         width: 1200,
         height: 800,
@@ -30,7 +30,7 @@ const Sections = ({locale}) => {
     },
     {
       id: 3,
-      href: '/products',
+      href: '/products?category=kesintisiz-guc-kaynagi',
       attributes: {
         width: 1200,
         height: 800,
@@ -42,7 +42,7 @@ const Sections = ({locale}) => {
     },
     {
       id: 4,
-      href: '/products',
+      href: '/products?category=ozel-cozumler',
       attributes: {
         width: 1200,
         height: 800,
