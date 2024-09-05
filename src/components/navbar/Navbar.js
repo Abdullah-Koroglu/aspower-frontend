@@ -30,6 +30,15 @@ const Navbar = ({ locale }) => {
     }
   }
 
+  const handleContact = () => {
+    const contactElement = document.getElementById('contact')
+    if (contactElement === null) {
+      window.location.href = '/contact'
+    } else {
+      contactElement.scrollIntoView({ behavior: "smooth", block: "start", inline: "nearest" })
+    }
+  }
+
   const menuDetailData = {
     products: {
       items: handleProductsMenuItems(),
@@ -85,9 +94,13 @@ const Navbar = ({ locale }) => {
               menuDetailData[menuHoverItem]?.items.map((item, index) => {
                 return (
                   <>
-                  {index === 0 && <div className="text-[#005770] font-bold">{currentLocale.electric_vehicle_charging_systems}</div>}
-                  {index === 3 && <div className="text-[#005770] font-bold">{currentLocale.powerElectronics}</div>}
-                  {index === 8 && <div className="text-[#005770] font-bold">{currentLocale.special_solutions}</div>}
+                  {
+                    menuHoverItem === 'products' ? <>
+                    {index === 0 && <div className="text-[#005770] font-bold">{currentLocale.electric_vehicle_charging_systems}</div>}
+                    {index === 3 && <div className="text-[#005770] font-bold">{currentLocale.powerElectronics}</div>}
+                    {index === 8 && <div className="text-[#005770] font-bold">{currentLocale.special_solutions}</div>}
+                    </> : null
+                  }
                     <Link
                       onMouseEnter={() => { setMenuDetailImage(item.image) }}
                       className={`text-[#ACC2C6] ${item.passive === true ? 'cursor-not-allowed' : 'cursor-pointer hover:text-[#005770]'}`}
@@ -158,7 +171,9 @@ const Navbar = ({ locale }) => {
           </Link>
           <div
             className="cursor-pointer xl:px-8 transition-all z-50 p-1 rounded-full hover:bg-white hover:text-[#005770]"
-            onClick={() => document.getElementById('contact').scrollIntoView({ behavior: "smooth", block: "start", inline: "nearest" })}
+            onClick={() => {
+              handleContact();
+            }}
           >
             {currentLocale.contact}
           </div>
