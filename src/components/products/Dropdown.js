@@ -37,7 +37,7 @@ function Dropdown({ data, setData, isAscharge, selectedCategory, setSelectedCate
             {product.id === selectedCategory && (
               <div className="hidden md:flex flex-col">
                 {product.items.map(item => (
-                  <Link href={`${dropdownAscharge ? '/ascharge' : ''}/products/${item.id}?category${selectedCategory}`} className="truncate">
+                  <Link href={`${dropdownAscharge ? '/ascharge' : ''}/products/${item.id}?category=${selectedCategory}`} className="truncate">
                     <div className="transition-all truncate bg-white hover:bg-[#EFF4F9] border-[#EFF4F9] border-2 border-t-0 px-6 py-2 text-[#005770] text-base">
                       {locale === 'tr' ? item.titleTR : item.titleEN}
                     </div>

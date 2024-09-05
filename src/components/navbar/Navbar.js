@@ -82,16 +82,23 @@ const Navbar = ({ locale }) => {
             className={`flex flex-col gap-4 ${show ? 'border-r border-zinc-200 pr-20' : 'w-40'}`}
           >
             {
-              menuDetailData[menuHoverItem]?.items.map((item, index) => (
-                <Link
-                  onMouseEnter={() => { setMenuDetailImage(item.image) }}
-                  className={`text-[#ACC2C6] ${item.passive === true ? 'cursor-not-allowed' : 'cursor-pointer hover:text-[#005770]'}`}
-                  key={index}
-                  href={item.passive !== true ? item.href : {}}
-                >
-                  {locale === 'tr' ? item.titleTR : item.titleEN}
-                </Link>
-              ))
+              menuDetailData[menuHoverItem]?.items.map((item, index) => {
+                return (
+                  <>
+                  {index === 0 && <div className="text-[#005770] font-bold">{currentLocale.electric_vehicle_charging_systems}</div>}
+                  {index === 3 && <div className="text-[#005770] font-bold">{currentLocale.powerElectronics}</div>}
+                  {index === 8 && <div className="text-[#005770] font-bold">{currentLocale.special_solutions}</div>}
+                    <Link
+                      onMouseEnter={() => { setMenuDetailImage(item.image) }}
+                      className={`text-[#ACC2C6] ${item.passive === true ? 'cursor-not-allowed' : 'cursor-pointer hover:text-[#005770]'}`}
+                      key={index}
+                      href={item.passive !== true ? item.href : {}}
+                    >
+                      {locale === 'tr' ? item.titleTR : item.titleEN}
+                    </Link>
+                  </>
+                )
+              })
             }
           </div>
           {
