@@ -51,7 +51,7 @@ function Detail({ itemData, type, locale }) {
           <div className="flex flex-wrap gap-4">
             {images.map((image, index) =>
             (
-              <Image key={index} width={3000} height={2000} src={image} alt={titleTR} className="w-full md:w-[calc(33%-.60rem)] h-auto mt-10" />
+              <Image key={index} width={1000} height={800} src={image} alt={titleTR} className="w-full md:w-[calc(33%-.60rem)] h-auto mt-10" />
             )
             )}
           </div>

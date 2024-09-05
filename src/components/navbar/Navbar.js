@@ -16,9 +16,9 @@ const Navbar = ({ locale }) => {
   const defaultImage = '/products/as-evc-20-40-kw-hizli-sarj-sistemi.jpg';
   let productsLink = '/ascharge/products';
   const [menuDetailImage, setMenuDetailImage] = useState(defaultImage);
+  const pathname = usePathname();
 
   const handleProductsMenuItems = () => {
-    const pathname = usePathname();
 
     let locationArray = pathname.split('/')
     locationArray = locationArray.filter((item) => item !== '');
