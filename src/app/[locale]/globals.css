@@ -269,6 +269,29 @@ h2 {
   color: #005770;
   background-color: white;
 }
+.menu-detail-enterprise {
+  display: none;
+}
+.menu-detail-products {
+  display: none;
+} 
+
+.navbar-enterprise:hover .menu-detail-enterprise {
+  display: block;
+}
+
+.navbar-products:hover .menu-detail-products {
+  display: block;
+}
+
+.navbar-products:hover .products-link {
+  color: #005770;
+  background-color: white;  
+}
+.navbar-enterprise:hover .enterprise-link {
+  color: #005770;
+  background-color: white;  
+}
 
 .overlay-color {
   transition: all 0.3s;

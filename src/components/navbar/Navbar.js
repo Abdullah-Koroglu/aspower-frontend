@@ -80,27 +80,27 @@ const Navbar = ({ locale }) => {
     window.location.replace(`/${locationArray.join('/')}`);
   };
 
-  const renderMenuDetail = () => {
-    const show = menuDetailData[menuHoverItem]?.showImage;
+  const renderMenuDetail = (type) => {
+    const show = menuDetailData[type]?.showImage;
     return (
       <div
-        className={`z-50 absolute top-[1.3rem] ${menuHoverItem === 'products' ? 'left-[-12rem]' : 'left-[8.5rem]'} pt-16 h-56 w-[${show ? '490rem' : '15rem'}] hidden menu-detail`}
+        className={`z-50 absolute top-[1rem] pt-16 h-56 ${show ? 'w-[47rem]' : 'w-[13rem]'} menu-detail-${type} left-1/2 transform -translate-x-1/2`}
       >
-        <div className={`flex gap-20 bg-white p-8 rounded-3xl drop-shadow-lg`}>
+        <div className={`flex items-center gap-20 bg-white p-8 rounded-3xl drop-shadow-lg`}>
           <div
-            className={`flex flex-col gap-4 ${show ? 'border-r border-zinc-200 pr-20' : 'w-40'}`}
+            className={`flex flex-col gap-4 ${show ? 'border-r border-zinc-200 pr-20 w-[25.5rem]' : 'w-40'}`}
           >
             {
-              menuDetailData[menuHoverItem]?.items.map((item, index) => {
+              menuDetailData[type]?.items.map((item, index) => {
                 return (
                   <>
-                  {
-                    menuHoverItem === 'products' ? <>
-                    {index === 0 && <div className="text-[#005770] font-bold">{currentLocale.electric_vehicle_charging_systems}</div>}
-                    {index === 3 && <div className="text-[#005770] font-bold">{currentLocale.powerElectronics}</div>}
-                    {index === 8 && <div className="text-[#005770] font-bold">{currentLocale.special_solutions}</div>}
-                    </> : null
-                  }
+                    {
+                      type === 'products' ? <>
+                        {index === 0 && <div className="text-[#005770] font-bold">{currentLocale.electric_vehicle_charging_systems}</div>}
+                        {index === 3 && <div className="text-[#005770] font-bold">{currentLocale.powerElectronics}</div>}
+                        {index === 8 && <div className="text-[#005770] font-bold">{currentLocale.special_solutions}</div>}
+                      </> : null
+                    }
                     <Link
                       onMouseEnter={() => { setMenuDetailImage(item.image) }}
                       className={`text-[#ACC2C6] ${item.passive === true ? 'cursor-not-allowed' : 'cursor-pointer hover:text-[#005770]'}`}
@@ -116,7 +116,7 @@ const Navbar = ({ locale }) => {
           </div>
           {
             show && (
-              <div className='flex flex-col gap-4 items-center justify-center rounded-lg'>
+              <div className='w-[23.5rem] flex flex-col gap-4 items-center justify-center rounded-lg'>
                 <Image
                   alt="logo"
                   className="w-[18rem] h-80 rounded-lg"
@@ -141,7 +141,7 @@ const Navbar = ({ locale }) => {
   }, [isMenuOpen]);
 
   return (
-    <div onMouseLeave={() => setMenuHoverItem('')} className={`flex w-full justify-center items-center z-10`}>
+    <div className={`flex w-full justify-center items-center z-10`}>
       <div className="flex text-sm justify-between items-center border rounded-full p-4 px-4 md:px-8 top-4 absolute z-10 w-[calc(100%-2rem)] md:w-[calc(100%-4rem)]">
         <Link href="/">
           <Image alt="logo" className="w-32 xl:w-40" src="/logo-beyaz.svg" width={300} height={300} />
@@ -152,20 +152,24 @@ const Navbar = ({ locale }) => {
           </button>
         </div>
         <div className={`hidden md:flex items-center lg:gap-8 text-white relative ${isMenuOpen ? 'flex flex-col' : 'hidden'}`}>
-          <Link
-            onMouseOver={() => setMenuHoverItem('products')}
-            className={`transition-all ${menuHoverItem === 'products' ? 'menu-active' : ''} products-link z-50 p-1 xl:px-8 rounded-full hover:bg-white hover:text-[#005770]`}
-            href={productsLink}
-          >
-            {currentLocale.our_products}
-          </Link>
-          <Link
-            onMouseOver={() => { setMenuHoverItem('enterprise') }}
-            className={`transition-all ${menuHoverItem === 'enterprise' ? 'menu-active' : ''} enterprise-link z-50 p-1 xl:px-8 rounded-full hover:bg-white hover:text-[#005770]`}
-            href="/institution-profile"
-          >
-            {currentLocale.corporate}
-          </Link>
+          <div className="relative navbar-products">
+            <Link
+              className={`transition-all ${menuHoverItem === 'products' ? 'menu-active' : ''} products-link z-50 p-1 xl:px-8 rounded-full hover:bg-white hover:text-[#005770]`}
+              href={productsLink}
+            >
+              {currentLocale.our_products}
+            </Link>
+            {renderMenuDetail('products')}
+          </div>
+          <div className="relative navbar-enterprise">
+            <Link
+              className={`transition-all ${menuHoverItem === 'enterprise' ? 'menu-active' : ''} enterprise-link z-50 p-1 xl:px-8 rounded-full hover:bg-white hover:text-[#005770]`}
+              href="/institution-profile"
+            >
+              {currentLocale.corporate}
+            </Link>
+            {renderMenuDetail('enterprise')}
+          </div>
           <Link className="transition-all z-50 p-1 xl:px-8 rounded-full hover:bg-white hover:text-[#005770]" href="/support">
             {currentLocale.techSupport}
           </Link>
@@ -177,7 +181,6 @@ const Navbar = ({ locale }) => {
           >
             {currentLocale.contact}
           </div>
-          {renderMenuDetail()}
         </div>
         <div className={`hidden md:flex gap-2 items-center text-white ${isMenuOpen ? 'flex flex-col mt-4' : ''}`}>
           <div className="flex ">
@@ -243,7 +246,7 @@ const Navbar = ({ locale }) => {
           <Link className="bg-gray-200 rounded-full p-2" href={
             // 'https://api.whatsapp.com/send?phone=905511086483'
             ''
-            }>
+          }>
             <FaWhatsapp className='text-black' />
           </Link>
         </div>
