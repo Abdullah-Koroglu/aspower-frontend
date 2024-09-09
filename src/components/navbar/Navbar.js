@@ -91,7 +91,6 @@ const Navbar = ({ locale }) => {
           <div
             className={`flex flex-col gap-4 ${show ? 'border-r border-zinc-200 pr-20 w-[25.5rem]' : 'w-40'}`}
           >
-            {console.log(menuDetailData[type])}
             {
               menuDetailData[type]?.items?.map((item, index) => {
                 return (

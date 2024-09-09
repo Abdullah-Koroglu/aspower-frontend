@@ -44,7 +44,7 @@ const page = ({params}) => {
 
     // Send the POST request
     try {
-      const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/support-email`, {
+      const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/support-email`, {
         method: 'POST',
         body: form,
       });
