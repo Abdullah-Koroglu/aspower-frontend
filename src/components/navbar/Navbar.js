@@ -26,7 +26,8 @@ const Navbar = ({ locale }) => {
       return products.slice(0, 3).map(category => ({ ...category, href: `/ascharge/products?category=${category.id}` }))
     } else {
       productsLink = '/products';
-      return products.filter(category => category.passive !== true)
+      return products
+      // return products.filter(category => category.passive !== true)
     }
   }
 
@@ -86,12 +87,13 @@ const Navbar = ({ locale }) => {
       <div
         className={`z-50 absolute top-[1rem] pt-16 h-56 ${show ? 'w-[47rem]' : 'w-[13rem]'} menu-detail-${type} left-1/2 transform -translate-x-1/2`}
       >
-        <div className={`flex items-center gap-20 bg-white p-8 rounded-3xl drop-shadow-lg`}>
+        <div className={`flex gap-20 bg-white p-8 rounded-3xl drop-shadow-lg z-50`}>
           <div
             className={`flex flex-col gap-4 ${show ? 'border-r border-zinc-200 pr-20 w-[25.5rem]' : 'w-40'}`}
           >
+            {console.log(menuDetailData[type])}
             {
-              menuDetailData[type]?.items.map((item, index) => {
+              menuDetailData[type]?.items?.map((item, index) => {
                 return (
                   <>
                     {
