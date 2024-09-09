@@ -76,7 +76,7 @@ const page = ({params}) => {
             <p className="text-lg font-light">{currentLocale.techSupportText}</p>
           </div>
         </div>
-        <div className="md:w-1/2 bg-slate-50 p-4 md:p-20 px-4 md:px-56 flex items-center justify-center">
+        <div className="md:w-1/2 bg-slate-50 p-4 md:p-20 px-4 md:px-32 2xl:px-56 flex items-center justify-center">
           <div className="w-full p-8 md:p-16 drop-shadow-lg rounded-3xl flex flex-col justify-center bg-white">
             <h3 className="w-full border-b border-black text-center mb-8">
               {currentLocale.support_form}
@@ -147,9 +147,9 @@ const page = ({params}) => {
               onChange={(e) => setFormData({ ...formData, description: e.target.value })}
               value={formData.description}
             />
-            <div className="flex flex-col md:flex-row w-full justify-end md:gap-8">
+            <div className="flex md:flex-wrap flex-col md:flex-row w-full justify-end md:gap-x-8 gap-y-2 mt-4 md:mt-14">
               <label
-                className="transition-all tab-selector bg-[#ACC2C6] hover:bg-[#bdd5da] p-2 px-10 md:px-16  self-end rounded-full md:mt-14 whitespace-nowrap text-2xl text-white pb-2"
+                className="transition-all tab-selector bg-[#ACC2C6] hover:bg-[#bdd5da] p-2 px-10 md:px-16  self-end rounded-full whitespace-nowrap text-2xl text-white pb-2"
                 htmlFor="file_input"
               >
                 <h2 className="whitespace-nowrap text-lg md:text-2xl text-white mb-1">
@@ -165,7 +165,7 @@ const page = ({params}) => {
               />
               <button
                 onClick={handleSubmit}
-                className={`transition-all tab-selector bg-sky-300 hover:bg-sky-200 p-2 px-10 md:px-16  self-end rounded-full mt-4 md:mt-14`}
+                className={`transition-all tab-selector bg-sky-300 hover:bg-sky-200 p-2 px-10 md:px-16  self-end rounded-full`}
               >
                 <h2 className="text-lg md:text-2xl text-white mb-1">
                   {currentLocale.submit}

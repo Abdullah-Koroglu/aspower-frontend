@@ -81,12 +81,11 @@ const page = ({ params }) => {
             backgroundPosition: 'center',
           }}
           className="relative flex items-center justify-center md:w-1/2 p-16 md:px-20 px-4">
-          {/* <h2 className="absolute top-8 left-20 text-white text-3xl font-medium">Yerinde Teknik Destek</h2> */}
           <div className="bg-[#111B2D] rounded-3xl text-white md:max-w-[60%] md:px-16 px-8 md:py-32 py-16 text-center flex flex-col items-center justify-center gap-16 drop-shadow-lg">
             <p className="text-lg font-light">{currentLocale.careerText}</p>
           </div>
         </div>
-        <div className="md:w-1/2 bg-slate-50 p-20 md:px-56 px-4 flex items-center justify-center">
+        <div className="md:w-1/2 bg-slate-50 p-20 md:px-20 2xl:px-56 px-4 flex items-center justify-center">
           <div className="w-full p-6 pt-16 md:p-16 drop-shadow-lg rounded-3xl flex flex-col justify-center bg-white">
             <h3 className="w-full border-b border-black text-center mb-8">
               {currentLocale.applicationForm}
@@ -227,9 +226,9 @@ const page = ({ params }) => {
             />
 
 
-            <div className="flex flex-col md:flex-row w-full justify-end md:gap-8">
+            <div className="flex md:flex-wrap flex-col md:flex-row w-full justify-end md:gap-8  mt-4 md:mt-14">
 
-              <label class="transition-all tab-selector bg-[#ACC2C6] hover:bg-[#bdd5da] p-1 md:p-2 px-6 md:px-16 self-end rounded-full mt-14 whitespace-nowrap text-2xl text-white pb-2" for="file_input">
+              <label class="transition-all tab-selector bg-[#ACC2C6] hover:bg-[#bdd5da] p-1 md:p-2 px-6 md:px-16 self-end rounded-full  whitespace-nowrap text-2xl text-white pb-2" for="file_input">
                 <h2 className="whitespace-nowrap text-lg md:text-2xl text-white md:mb-1">
                   {currentLocale.selectFile}
                 </h2>
@@ -237,7 +236,7 @@ const page = ({ params }) => {
               <input onChange={handleFileChange} class="hidden w-full text-sm text-gray-900 border border-gray-300 rounded-lg cursor-pointer bg-gray-50 dark:text-gray-400 focus:outline-none dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400" aria-describedby="file_input_help" id="file_input" type="file" />
               <button
                 onClick={handleSubmit}
-                className={`transition-all tab-selector bg-sky-300 hover:bg-sky-200 p-1 md:p-2 px-6 md:px-16 self-end rounded-full mt-4 md:mt-14`}
+                className={`transition-all tab-selector bg-sky-300 hover:bg-sky-200 p-1 md:p-2 px-6 md:px-16 self-end rounded-full `}
               >
                 <h2 className="text-lg md:text-2xl text-white mb-1">
                   {currentLocale.submit}
