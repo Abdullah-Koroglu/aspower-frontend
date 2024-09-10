@@ -11,9 +11,6 @@ async function page({ params }) {
   // const pageData = await data.json()
 
   const pageData = certificates.map((item, index) => ({...item, title: locale === 'tr' ? item.certificateTr : item.certificateEn}))
-  console.log(pageData);
-  
-
 
   return (
     <div>

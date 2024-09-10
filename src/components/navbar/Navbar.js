@@ -42,7 +42,7 @@ const Navbar = ({ locale }) => {
 
   const menuDetailData = {
     products: {
-      items: window ? handleProductsMenuItems() : [],
+      items: handleProductsMenuItems(),
       showImage: true
     },
     enterprise: {
