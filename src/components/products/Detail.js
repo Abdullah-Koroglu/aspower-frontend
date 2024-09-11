@@ -78,6 +78,12 @@ function Detail({ itemData, type, locale }) {
           </Link>
           : null
       }
+
+      {
+        itemData.sheetTR ? <Link target="_blank" rel="noopener noreferrer" href={locale === 'tr' ? itemData.sheetTR : itemData.sheetEN} className="transition-all tab-selector flex bg-sky-300 hover:bg-sky-200 p-2 px-12 rounded-full w-fit ml-auto mr-auto mb-10">
+          <h2 className="text-lg xl:text-2xl text-white mb-1 ">PDF</h2>
+        </Link> : null
+      }
     </div>
   )
 }

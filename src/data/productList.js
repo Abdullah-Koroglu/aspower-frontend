@@ -620,8 +620,8 @@ const products = [{
     "titleEN": "Special Solutions (1kVA - 4MVA)",
     "id": "ozel-cozumler-1kva-4mva",
     "images": ["/products/ozel-cozumler.jpg"],
-    sheetTR: '/datasheet/tr/ASPOWER Enerji_Özel Tasarım Güç Kaynakları Katalog',
-    sheetTR: '/datasheet/tr/ASPOWER_Special Solutions.pdf',
+    sheetTR: '/datasheet/tr/ASPOWER Enerji_Özel Tasarım Güç Kaynakları Katalog.pdf',
+    sheetEN: '/datasheet/en/ASPOWER_Special Solutions.pdf',
     "bodyTR": [
       {
         "text": "ASPOWER, müşterinin talebi doğrultusunda müşteri spesifikasyonuna göre istenilen özel tip güç kaynağı üretmektedir."
