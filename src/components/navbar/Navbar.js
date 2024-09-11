@@ -186,13 +186,13 @@ const Navbar = ({ locale }) => {
         <div className={`hidden md:flex gap-2 items-center text-white ${isMenuOpen ? 'flex flex-col mt-4' : ''}`}>
           <div className="flex ">
             <div
-              className={`px-1 border-r-2 border-white flex items-center h-1/3 ${locale !== 'tr' ? 'text-[#cecece] font-light' : 'text-white font-medium'} cursor-pointer`}
+              className={`px-1 border-r-2 border-white flex items-center h-1/3 ${locale !== 'tr' ? 'opacity-75 font-light' : 'text-white font-medium'} cursor-pointer`}
               onClick={() => { handleLanguageChange('tr') }}
             >
               {currentLocale.languageTR}
             </div>
             <div
-              className={`px-1 flex items-center ${locale !== 'en' ? 'text-[#cecece] font-light' : 'text-white font-medium'} cursor-pointer`}
+              className={`px-1 flex items-center ${locale !== 'en' ? 'opacity-75 font-light' : 'text-white font-medium'} cursor-pointer`}
               onClick={() => { handleLanguageChange('en') }}
             >
               {currentLocale.languageEN}
