@@ -40,8 +40,8 @@ export default function Footer({ locale }) {
             </Link>
           </div>
         </div>
-        <div className="md:border-r border-gray-500 md:w-1/4 px-4">
-          <div className="flex flex-col gap-6 h-[30rem] md:h-[25rem] xl:h-[22rem]">
+        <div className="md:h-[25rem] xl:h-[22rem] md:w-1/4 md:border-r border-gray-500">
+          <div className="md:w-fit md:mx-auto flex flex-col gap-6 md:pl-4">
             <p className="w-fit font-semibold text-white">
               {currentLocale.products_title}
             </p>
