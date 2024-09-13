@@ -87,7 +87,7 @@ const Navbar = ({ locale }) => {
       <div
         className={`z-50 absolute top-[1rem] pt-16 h-56 ${show ? 'w-[47rem]' : 'w-[13rem]'} menu-detail-${type} left-1/2 transform -translate-x-1/2`}
       >
-        <div className={`flex gap-20 bg-white p-8 rounded-3xl drop-shadow-lg z-50`}>
+        <div className={`flex bg-white p-8 rounded-3xl drop-shadow-lg z-50`}>
           <div
             className={`flex flex-col gap-4 ${show ? 'border-r border-zinc-200 pr-20 w-[25.5rem]' : 'w-40'}`}
           >
@@ -117,10 +117,10 @@ const Navbar = ({ locale }) => {
           </div>
           {
             show && (
-              <div className='w-[23.5rem] flex flex-col gap-4 items-center justify-center rounded-lg'>
+              <div className='w-[25.5rem] pl-8 flex flex-col items-center justify-center'>
                 <Image
                   alt="logo"
-                  className="w-[18rem] h-80 rounded-lg"
+                  className="w-[100%] h-80 rounded-lg"
                   src={menuDetailImage ?? defaultImage}
                   width={500}
                   height={500}
