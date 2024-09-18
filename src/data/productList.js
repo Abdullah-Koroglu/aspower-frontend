@@ -8,6 +8,8 @@ const products = [{
     "titleTR": "AS EVC 20-40 kW Hızlı Şarj Sistemi",
     "titleEN": "AS EVC 20-40 kW Fast Charging System",
     "id": "as-evc-20-40-kw-hizli-sarj-sistemi",
+     sheetTR: "/datasheet/en/evc.pdf",
+     sheetEN: '/datasheet/en/evc.pdf',
     "images": ["/products/as-evc-20-40-kw-hizli-sarj-sistemi.jpg"],
     "bodyTR": [
       { text: "Tak ve Şarj Et teknolojisi ile müdaheleye gerek kalmadan yüksek hızlı şarj imkanı sunar.", },
@@ -30,6 +32,8 @@ const products = [{
     "titleTR": "AS EVC 60-100 kW Hızlı Şarj Sistemi",
     "titleEN": "AS EVC 60-100 kW Fast Charging System",
     "id": "as-evc-60-100-kw-hizli-sarj-sistemi",
+     sheetTR: "/datasheet/en/evc.pdf",
+     sheetEN: '/datasheet/en/evc.pdf',
     "images": ["/products/as-evc-60-100-kw-hizli-sarj-sistemi.jpg"],
     "bodyTR": [
       { text: "Tak ve Şarj Et teknolojisi ile müdaheleye gerek kalmadan yüksek hızlı şarj imkanı sunar.", },
@@ -52,6 +56,8 @@ const products = [{
     "titleTR": "AS EVC 80 kW DUO Hızlı Şarj Sistemi",
     "titleEN": "AS EVC 80 kW DUO Fast Charging System",
     "id": "as-evc-80-kw-duo-hizli-sarj-sistemi",
+     sheetTR: "/datasheet/en/evc.pdf",
+     sheetEN: '/datasheet/en/evc.pdf',
     "images": ["/products/as-evc-80-kw-duo-hizli-sarj-sistemi.jpg"],
     "bodyTR": [
       { text: "Tak ve Şarj Et teknolojisi ile müdaheleye gerek kalmadan yüksek hızlı şarj imkanı sunar.", },
@@ -76,6 +82,8 @@ const products = [{
     "titleTR": "AS EVC 120-200 kW Hızlı Şarj Sistemi",
     "titleEN": "AS EVC 120-200 kW Fast Charging System",
     "id": "as-evc-120-200-kw-hizli-sarj-sistemi",
+     sheetTR: "/datasheet/en/evc.pdf",
+     sheetEN: '/datasheet/en/evc.pdf',
     "images": ["/products/as-evc-120-200-kw-hizli-sarj-sistemi.jpg"],
     "bodyTR": [
       { text: "Tak ve Şarj Et teknolojisi ile müdaheleye gerek kalmadan yüksek hızlı şarj imkanı sunar.", },
@@ -100,6 +108,8 @@ const products = [{
     "titleTR": "AS EVC 240-360 kW Hızlı Şarj Sistemi",
     "titleEN": "AS EVC 240-360 kW Fast Charging System",
     "id": "as-evc-240-360-kw-hizli-sarj-sistemi",
+     sheetTR: "/datasheet/en/evc.pdf",
+     sheetEN: '/datasheet/en/evc.pdf',
     "images": ["/products/as-evc-240-360-kw-hizli-sarj-sistemi.jpg"],
     "bodyTR": [
       { text: "Tak ve Şarj Et teknolojisi ile müdaheleye gerek kalmadan yüksek hızlı şarj imkanı sunar.", },
@@ -124,6 +134,8 @@ const products = [{
     "titleTR": "AS EVC 480 kW Hızlı Şarj Sistemi",
     "titleEN": "AS EVC 480 kW Fast Charging System",
     "id": "as-evc-480-kw-hizli-sarj-sistemi",
+     sheetTR: "/datasheet/en/evc.pdf",
+     sheetEN: '/datasheet/en/evc.pdf',
     "images": ["/products/as-evc-480-kw-hizli-sarj-sistemi.jpg"],
     "bodyTR": [
       { text: "Tak ve Şarj Et teknolojisi ile müdaheleye gerek kalmadan yüksek hızlı şarj imkanı sunar.", },
@@ -150,6 +162,8 @@ const products = [{
     "titleTR": "AS EVC 600 kW Hızlı Şarj Sistemi",
     "titleEN": "AS EVC 600 kW Fast Charging System",
     "id": "as-evc-600-kw-hizli-sarj-sistemi",
+     sheetTR: "/datasheet/en/evc.pdf",
+     sheetEN: '/datasheet/en/evc.pdf',
     "images": ["/products/as-evc-600-kw-hizli-sarj-sistemi.jpg"],
     "bodyTR": [
       { text: "Sisteme tek araç bağlıyken 200kW gücünde; iki araç bağlıyken 2x100kW gücünde eş zamanlı şarj işlemi sağlayabilmektedir.", },
@@ -174,6 +188,8 @@ const products = [{
     "titleTR": "AS EVC 800 kW Hızlı Şarj Sistemi",
     "titleEN": "AS EVC 800 kW Fast Charging System",
     "id": "as-evc-800-kw-hizli-sarj-sistemi",
+     sheetTR: "/datasheet/en/evc.pdf",
+     sheetEN: '/datasheet/en/evc.pdf',
     "images": ["/products/as-evc-800-kw-hizli-sarj-sistemi.jpg"],
     "bodyTR": [
       { text: "Sisteme tek araç bağlıyken 200kW gücünde; iki araç bağlıyken 2x100kW gücünde eş zamanlı şarj işlemi sağlayabilmektedir.", },
@@ -217,10 +233,16 @@ const products = [{
     id: 'as-evc-1150m',
     images: ['/products/as-evc-1150m.png', '/products/as-evc-1150m-1.png', '/products/as-evc-1150m-2.png', '/products/as-evc-1150m-3.png', '/products/as-evc-1150m-4.png'],
     bodyTR: [
-      { text: '' }
+      { text: 'Tak ve Şarj Et teknolojisi ile müdaheleye gerek kalmadan yüksek hızlı şarj imkanı sunar.' },
+      { text: '150kW\'a kadar yükseltilebilir modüler yapıya sahiptir.' },
+      { text: 'OCPP desteği ile kredi/banka kartı, RFID kart, NFC veya mobil ödeme yöntemleriyle temassız ve kolay bir ödeme deneyimi sunar. (opsiyonel)' },
+      { text: '*Görseldeki Araç, Şarj Sistemine Dahil Değildir.' },
     ],
     bodyEN: [
-      { text: '' }
+      { text: 'Provides high-speed charging without the need for intervention with Plug and Charge technology.' },
+      { text: 'It has a modular structure that can be upgraded up to 150kW.' },
+      { text: 'Offers a contactless and easy payment experience with OCPP support via credit/debit cards, RFID cards, NFC, or mobile payment methods. (optional)' },
+      { text: '*Vehicle in the Visual is Not Included in the Charging System.' },
     ]
   }]
 },

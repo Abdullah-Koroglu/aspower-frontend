@@ -44,9 +44,9 @@ function Detail({ itemData, type, locale }) {
           item.bulletpoints.map((bullet, index) => (
             <li key={index} className="list-disc list-inside">{bullet}</li>
           ))
-          }</div>}
+        }</div>}
       </>
-      ))
+    ))
   }
 
 
@@ -61,6 +61,11 @@ function Detail({ itemData, type, locale }) {
           <h2 className="text-2xl md:text-5xl sans w-2/3">{locale === 'tr' ? titleTR : titleEN}</h2>
           <div className="mt-10 mb-20">
             {handleBody(body)}
+            {
+              itemData.sheetTR ? <Link target="_blank" rel="noopener noreferrer" href={locale === 'tr' ? itemData.sheetTR : itemData.sheetEN} className="transition-all tab-selector flex bg-sky-300 hover:bg-sky-200 p-2 px-12 rounded-full w-fit mt-10">
+                <h2 className="text-lg xl:text-2xl text-white mb-1 ">{currentLocale.details}</h2>
+              </Link> : null
+            }
             <div className="flex flex-wrap gap-4">
               {images.map((image, index) =>
               (
@@ -68,22 +73,16 @@ function Detail({ itemData, type, locale }) {
               )
               )}
             </div>
+            {
+              (type !== 'blog' && !isAscharge && (selectedCategory === 'dc-arac-sarj-sistemi' || selectedCategory === 'ac-arac-sarj-sistemi')) ?
+                <Link href="/ascharge" className="transition-all tab-selector flex bg-sky-300 hover:bg-sky-200 p-2 px-12 rounded-full w-fit my-10">
+                  <h2 className="text-lg xl:text-2xl text-white mb-1 ">              {currentLocale.visitAscharge}</h2>
+                </Link>
+                : null
+            }
           </div>
         </div>
       </div>
-      {
-        (type !== 'blog' && !isAscharge && (selectedCategory === 'dc-arac-sarj-sistemi' || selectedCategory === 'ac-arac-sarj-sistemi')) ?
-          <Link href="/ascharge" className="transition-all tab-selector flex bg-sky-300 hover:bg-sky-200 p-2 px-12 rounded-full w-fit ml-auto mr-auto mb-10">
-            <h2 className="text-lg xl:text-2xl text-white mb-1 ">              {currentLocale.visitAscharge}</h2>
-          </Link>
-          : null
-      }
-
-      {
-        itemData.sheetTR ? <Link target="_blank" rel="noopener noreferrer" href={locale === 'tr' ? itemData.sheetTR : itemData.sheetEN} className="transition-all tab-selector flex bg-sky-300 hover:bg-sky-200 p-2 px-12 rounded-full w-fit ml-auto mr-auto mb-10">
-          <h2 className="text-lg xl:text-2xl text-white mb-1 ">PDF</h2>
-        </Link> : null
-      }
     </div>
   )
 }

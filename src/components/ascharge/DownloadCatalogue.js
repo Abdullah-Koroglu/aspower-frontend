@@ -16,7 +16,7 @@ const DownloadCatalogue = ({locale}) => {
 
   const handleDownload = () => {
     const link = document.createElement('a');
-    link.href = `/${formData.catalogue}_${formData.language}.pdf`;
+    link.href = `/catalogues/${formData.catalogue}_${formData.language}.pdf`;
     link.download = 'katalog.pdf';
     document.body.appendChild(link);
     link.click();

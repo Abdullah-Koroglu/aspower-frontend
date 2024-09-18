@@ -8,7 +8,7 @@ export default function Footer({ locale }) {
   return (
     <div className="bg-[#111B2D]">
       <div className="footer flex justify-between items-start flex-wrap overflow-hidden text-sm xl:text-base text-neutral-300 px-4 md:px-8 lg:px-16 3xl:w-2/3 pt-12 mx-auto pb-8 max-md:gap-8">
-        <div className="md:h-[25rem] xl:h-[22rem] md:w-1/4 md:border-r border-gray-500">
+        <div className="md:h-[25rem] md:pr-8 xl:h-[22rem] md:w-1/4 md:border-r border-gray-500">
           <div className="md:w-full md:px-4">
             <p className="w-fit font-semibold text-white">
               ASPOWER ENERJİ VE ELEKTRONİK SANAYİ TİCARET A.Ş
@@ -19,7 +19,7 @@ export default function Footer({ locale }) {
           </div>
         </div>
         <div className="md:h-[25rem] xl:h-[22rem] md:w-1/4 md:border-r border-gray-500">
-          <div className="md:w-fit md:mx-auto flex flex-col gap-6 md:pl-4">
+          <div className="md:w-full md:mx-auto flex flex-col gap-6 md:pl-4">
             <p className="w-full font-semibold text-white">
               {currentLocale.corporate_title}
             </p>
@@ -41,7 +41,7 @@ export default function Footer({ locale }) {
           </div>
         </div>
         <div className="md:h-[25rem] xl:h-[22rem] md:w-1/4 md:border-r border-gray-500">
-          <div className="md:w-fit md:mx-auto flex flex-col gap-6 md:pl-4">
+          <div className="md:w-full md:mx-auto flex flex-col gap-6 md:pl-4">
             <p className="w-fit font-semibold text-white">
               {currentLocale.products_title}
             </p>
