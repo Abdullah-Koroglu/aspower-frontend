@@ -49,7 +49,7 @@
   "full_name": "Full Name",
   "email": "Email Address",
   "phone": "Phone Number",
-  "privacy_policy": "I have read the information provided under the Personal Data Protection Law regarding the reasons and sources of my personal data collection, how it is used, and my other rights.",
+  "privacy_policy": "I have read the <a href=\"\">information</a> provided under the <a href=\"\">Personal Data Protection Law</a> regarding the reasons and sources of my personal data collection, how it is used, and my other rights.",
   "newsletter_signup": "Sign up for our newsletter and follow Aspower!",
   "location": "Location",
   "commercial": "Commercial",
@@ -100,5 +100,9 @@
   "preserved": "All rights are reserved",
   "techSupportTitle": "Fault & Technical Support Notification Form",
   "visitAscharge": "Visit Ascharge",
-  "powerElectronics": "Power Electronics"
+  "powerElectronics": "Power Electronics",
+  "productInfoForm": "Product Offer / Information Request",
+  "branchForm": "Dealership Offer",
+  "commercialForm": "Commercial Partnership Request",
+  "locationForm": "Location Partnership Request"
 }

@@ -293,6 +293,10 @@ h2 {
   background-color: white;  
 }
 
+.form-links > a {
+  color: #65D5EF;
+}
+
 .overlay-color {
   transition: all 0.3s;
   position: absolute;

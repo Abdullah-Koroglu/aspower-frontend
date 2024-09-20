@@ -48,7 +48,7 @@
   "full_name": "Adınız-Soyadınız",
   "email": "E-posta Adresiniz",
   "phone": "Telefon Numaranız",
-  "privacy_policy": "Kişisel verilerimin neden ve nerelerden toplandığı, nasıl kullanıldığı ve diğer haklarımla ilgili olarak Kişisel Verilerin Korunması Kanunu uyarınca yapılan bilgilendirmeyi okudum.",
+  "privacy_policy": "Kişisel verilerimin neden ve nerelerden toplandığı, nasıl kullanıldığı ve diğer haklarımla ilgili olarak <a href=\"\">Kişisel Verilerin Korunması Kanunu</a> uyarınca yapılan <a href=\"\">bilgilendirmeyi</a> okudum.",
   "newsletter_signup": "E-Posta bültenimize kayıt olun, Aspower’ı takip edin!",
   "location": "Lokasyon",
   "commercial": "Ticari",
@@ -101,5 +101,9 @@
   "techSupportTitle": "Arıza & Teknik Destek Bildirimi Formu",
   "preserved": "Tüm hakları saklıdır.",
   "visitAscharge": "Ascharge'ı Ziyaret Edin",
-  "powerElectronics": "Güç Elektroni̇ği̇"
+  "powerElectronics": "Güç Elektroni̇ği̇",
+  "productInfoForm": "Ürün Teklif / Bilgi Talebi",
+  "branchForm": "Bayilik Teklifi",
+  "commercialForm": "Ticari Partnerlik Talebi",
+  "locationForm": "Lokasyon Partnerliği Talebi"
 }

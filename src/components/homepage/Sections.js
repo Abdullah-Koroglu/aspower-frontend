@@ -11,7 +11,7 @@ const Sections = ({locale}) => {
         width: 1200,
         height: 800,
         name: 'image1',
-        url: '/Elektrikli-arac-sarj-sistemleri.jpg',
+        url: '/Elektrikli-arac-sarj-sistemleri-2.jpg',
         titleTR: 'Elektri̇kli̇ Araç Şarj Si̇stemleri̇',
         titleEN: 'Electric Vehicle Charging Systems'
       }
@@ -69,7 +69,7 @@ const Sections = ({locale}) => {
             priority
           />
 
-          <h2 className={`${image?.attributes?.darkImage !== true ? 'text-[#005770]': 'text-white'}  font-normal text-xl xl:text-4xl max-w-[35%] absolute bottom-4 xl:bottom-8 left-4 xl:left-8`}>
+          <h2 className={`${image?.attributes?.darkImage !== true ? 'text-[#005770]': 'text-white'}  font-normal text-xl xl:text-4xl max-w-[45%] md:max-w-[55%] absolute bottom-4 xl:bottom-8 left-4 xl:left-8`}>
             {locale === 'tr' ? titleTR : titleEN}
           </h2>
         </ConditionalLink>

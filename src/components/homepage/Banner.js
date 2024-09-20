@@ -67,8 +67,8 @@ const Banner = ({locale}) => {
               objectFit="cover"
             />
             <div className="w-full xl:w-1/4 md:mt-[60vh] xl:mt-[30vh] 2xl:mt-[50vh] z-0">
-              <h1 className="text-3xl md:text-4xl md:font-light md:max-w-[70%]">{locale === 'tr' ? slide.titleTR : slide.titleEN}</h1>
-              <p className="text-xl font-light hidden md:block">{locale === 'tr' ? slide.captionTR : slide.captionEN}</p>
+              <h1 className="text-3xl md:text-4xl md:max-w-[70%]">{locale === 'tr' ? slide.titleTR : slide.titleEN}</h1>
+              <p className="text-xl hidden md:block">{locale === 'tr' ? slide.captionTR : slide.captionEN}</p>
             </div>
           </div>
         ))}
