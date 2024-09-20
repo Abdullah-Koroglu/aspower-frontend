@@ -1,11 +1,12 @@
 'use client';
 import React, { useEffect, useState } from 'react';
-import { Checkbox } from "@nextui-org/react";
 import Link from 'next/link';
 import locales from '@/locales';
 import products from '@/data/productList';
+import { usePathname } from 'next/navigation';
 
 const Contact = ({ locale }) => {
+  const pathname = usePathname()
   const currentLocale = locales[locale]
   const defaultFormData = {
     name: '',
@@ -19,6 +20,16 @@ const Contact = ({ locale }) => {
   const [selectedCategory, setSelectedCategory] = useState('dc-arac-sarj-sistemi');
   const [partnership, setPartnership] = useState('Lokasyon');
   const [formData, setFormData] = useState(defaultFormData);
+
+  const returnProducts = () => {
+    let locationArray = pathname.split('/')
+    locationArray = locationArray.filter((item) => item !== '');
+    if (locationArray[0] === 'ascharge' || locationArray[1] === 'ascharge') {
+      return products.slice(0, 3)
+    } else {
+      return products
+    }
+  }
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -86,32 +97,35 @@ const Contact = ({ locale }) => {
             <option value="Ticari Partnerlik Talebi">{currentLocale.commercialForm}</option>
             <option value="Lokasyon Partnerliği Talebi">{currentLocale.locationForm}</option>
           </select>
-          <div className="flex gap-4 my-4">
-            <select
-              className="border-gray-300 text-[#005770] rounded-md w-[calc(50%-.5rem)]"
-              onChange={(e) => {
-                setFormData({ ...formData, message: products.find(product => product.id === e.target.value)?.items[0].titleTR })
-                setSelectedCategory(e.target.value)
-              }}
-            >
-              {
-                products.map((category, index) => (
-                  <option key={index} value={category.id}>{locale === 'tr' ? category.titleTR : category.titleEN}</option>
-                ))
-              }
-            </select>
-     
-            <select 
-              onChange={(e) => {setFormData({ ...formData, message: e.target.value })}}
-              className="border-gray-300 text-[#005770] rounded-md w-[calc(50%-.5rem)]"
-            >
-              {
-                products.find(product => product.id === selectedCategory)?.items.map((product, index) => (
-                  <option key={index} value={product.titleTR}>{locale === 'tr' ? product.titleTR : product.titleEN}</option>
-                ))
-              }
-            </select>
-          </div>
+          {
+            formData.subject !== 'Bayilik Teklifi' && (
+              <div className="flex gap-4 my-4">
+                <select
+                  className="border-gray-300 text-[#005770] rounded-md w-[calc(50%-.5rem)]"
+                  onChange={(e) => {
+                    setFormData({ ...formData, message: returnProducts().find(product => product.id === e.target.value)?.items[0].titleTR })
+                    setSelectedCategory(e.target.value)
+                  }}
+                >
+                  {
+                    returnProducts().map((category, index) => (
+                      <option disabled={category.passive} key={index} value={category.id}>{locale === 'tr' ? category.titleTR : category.titleEN}</option>
+                    ))
+                  }
+                </select>
+                <select
+                  onChange={(e) => { setFormData({ ...formData, message: e.target.value }) }}
+                  className="border-gray-300 text-[#005770] rounded-md w-[calc(50%-.5rem)]"
+                >
+                  {
+                    returnProducts().find(product => product.id === selectedCategory)?.items.map((product, index) => (
+                      <option key={index} value={product.titleTR}>{locale === 'tr' ? product.titleTR : product.titleEN}</option>
+                    ))
+                  }
+                </select>
+              </div>
+            )
+          }
           <input
             className="w-full p-2 mb-4 border-0 border-b border-black outline-none ring-0 focus:ring-0 focus:outline-none"
             placeholder={currentLocale.full_name}
@@ -137,7 +151,7 @@ const Contact = ({ locale }) => {
               checked={formData.consent}
               onChange={(e) => setFormData({ ...formData, consent: e.target.checked })}
             />
-            <span className="text-sm text-gray-600 text-left form-links" dangerouslySetInnerHTML={{__html: currentLocale.privacy_policy}}/>
+            <span className="text-sm text-gray-600 text-left form-links" dangerouslySetInnerHTML={{ __html: currentLocale.privacy_policy }} />
           </div>
 
           <div className="flex mt-4 gap-4">

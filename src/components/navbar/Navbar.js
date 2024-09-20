@@ -11,7 +11,6 @@ import { usePathname } from 'next/navigation';
 
 const Navbar = ({ locale }) => {
   const currentLocale = locales[locale];
-  const [menuHoverItem, setMenuHoverItem] = useState('');
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const defaultImage = '/products/as-evc-20-40-kw-hizli-sarj-sistemi.jpg';
   let productsLink = '/ascharge/products';
@@ -19,7 +18,6 @@ const Navbar = ({ locale }) => {
   const pathname = usePathname();
 
   const handleProductsMenuItems = () => {
-
     let locationArray = pathname.split('/')
     locationArray = locationArray.filter((item) => item !== '');
     if (locationArray[0] === 'ascharge' || locationArray[1] === 'ascharge') {
@@ -155,7 +153,7 @@ const Navbar = ({ locale }) => {
         <div className={`hidden md:flex items-center lg:gap-8 text-white relative ${isMenuOpen ? 'flex flex-col' : 'hidden'}`}>
           <div className="relative navbar-products">
             <Link
-              className={`transition-all ${menuHoverItem === 'products' ? 'menu-active' : ''} products-link z-50 p-1 xl:px-8 rounded-full hover:bg-white hover:text-[#005770]`}
+              className={`transition-all products-link z-50 p-1 xl:px-8 rounded-full hover:bg-white hover:text-[#005770]`}
               href={productsLink}
             >
               {currentLocale.our_products}
@@ -164,7 +162,7 @@ const Navbar = ({ locale }) => {
           </div>
           <div className="relative navbar-enterprise">
             <Link
-              className={`transition-all ${menuHoverItem === 'enterprise' ? 'menu-active' : ''} enterprise-link z-50 p-1 xl:px-8 rounded-full hover:bg-white hover:text-[#005770]`}
+              className={`transition-all enterprise-link z-50 p-1 xl:px-8 rounded-full hover:bg-white hover:text-[#005770]`}
               href="/institution-profile"
             >
               {currentLocale.corporate}
