@@ -6,6 +6,7 @@ import products from '@/data/productList';
 import locales from '@/locales';
 import Link from 'next/link';
 import { usePathname, useSearchParams } from 'next/navigation';
+import { handleBody } from '../helper';
 
 
 function Detail({ itemData, type, locale }) {
@@ -33,21 +34,6 @@ function Detail({ itemData, type, locale }) {
       setSelectedCategory(category)
     }
   }, [])
-
-  const handleBody = (body) => {
-    return body?.map((item, index) => (
-      <>
-        {item.text && <p key={index} className="text-xl font-base mb-4 text-[#005770]">{item.text}</p>}
-        {item.subtitle && <h3 key={index} className="text-xl font-semibold mb-4 text-[#005770]">{item.subtitle}</h3>}
-        {item.image && <Image key={index} width={3000} height={800} src={item.image} alt={titleTR} className="w-full h-auto mt-10" />}
-        {item.bulletpoints && <div key={index} className="text-xl font-base mb-4 text-[#005770]">{
-          item.bulletpoints.map((bullet, index) => (
-            <li key={index} className="list-disc list-inside">{bullet}</li>
-          ))
-        }</div>}
-      </>
-    ))
-  }
 
 
 

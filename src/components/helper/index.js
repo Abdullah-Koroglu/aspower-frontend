@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 export const capitalize = (str) => {
   let result = str.charAt(0).toUpperCase() + str.slice(1);
   return result;
@@ -31,4 +33,21 @@ export const findProduct = (products, id) => {
 
   
   return productsList.find(product => product.id === id)
+}
+
+
+export const handleBody = (body) => {
+  return body?.map((item, index) => (
+    <>
+      {item.text && <p key={index} className="text-xl font-base mb-4 text-[#005770]">{item.text}</p>}
+      {item.linkText && <Link target="_blank" key={index} href={item.href} className="text-xl font-base mb-4 pb-4 text-[#238aa7]">{item.linkText}</Link>}
+      {item.subtitle && <h3 key={index} className="text-xl font-semibold mb-4 text-[#005770]">{item.subtitle}</h3>}
+      {item.image && <Image key={index} width={3000} height={800} src={item.image} alt={titleTR} className="w-full h-auto mt-10" />}
+      {item.bulletpoints && <div key={index} className="text-xl font-base mb-4 text-[#005770]">{
+        item.bulletpoints.map((bullet, index) => (
+          <li key={index} className="list-disc list-inside">{bullet}</li>
+        ))
+      }</div>}
+    </>
+  ))
 }
