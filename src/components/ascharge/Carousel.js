@@ -24,7 +24,7 @@ const Carousel = ({locale}) => {
       <div className={`flex flex-col md:items-end ${index % 2 === 0 ? 'md:flex-row-reverse': 'md:flex-row'}`}>
         <div className={`${index % 2 === 1 ? 'px-4 md:pr-4 xl:pr-8': 'px-4 md:pl-4 xl:pl-8'} md:w-1/3 xl:w-1/4 mb-8 md:mb-0`}>
           <h2 className="mb-4 md:mb-0 text-lg xl:text-xl">{locale === 'tr' ? item.titleTR : item.titleEN}</h2>
-          <p className="text-xs xl:text-sm text-[#005770]">{locale === 'tr' ? item.descriptionTR : item.descriptionEN}</p>
+          <p className="text-sm text-[#005770]">{locale === 'tr' ? item.descriptionTR : item.descriptionEN}</p>
         </div>
         <Image
           className={`lg:w-3/4 md:w-2/3 md:rounded-2xl`}

@@ -6,13 +6,23 @@ import React, { useState } from 'react';
 const DownloadCatalogue = ({locale}) => {
   const currentLocale = locales[locale]
 
-  const [formData, setFormData] = useState({ catalogue: 'vehicle', language: 'tr' });
+  const [formData, setFormData] = useState({ catalogue: 'evc', language: 'tr' });
   const handleCatalogueSelect = (e) => {
     setFormData({ ...formData, catalogue: e.target.value });
   }
   const handleLanguageSelect = (e) => {
     setFormData({ ...formData, language: e.target.value });
   }
+
+  const handleDownload = () => {
+    const link = document.createElement('a');
+    link.href = `/catalogues/${formData.catalogue}_${formData.language}.pdf`;
+    link.download = 'katalog.pdf';
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  };
+
   return (
     <div className="flex flex-col-reverse md:flex-row items-center justify-center w-full h-full mb-12 p-4 md:p-10 xl:p-20">
       <div className="md:w-1/2">
@@ -20,9 +30,9 @@ const DownloadCatalogue = ({locale}) => {
           {currentLocale.discoverCatalogues}
         </h2>
         <div className="flex gap-8 mt-10">
-          <div onClick={() => setFormData((oldState) => ({...oldState, catalogue: 'vehicle' }))} className="transition-all flex gap-2 items-start max-w-48 cursor-pointer">
-            <input className={`cursor-pointer ring-0 focus:ring-0 mt-2 bg-[#EFF4F9] border-0 text-[#65D5EF]`} type="radio" name="catalogue" value="vehicle" checked={formData.catalogue === 'vehicle'} onChange={handleCatalogueSelect} />
-            <label className={`cursor-pointer transition-all text-base xl:text-lg font-medium ${formData.catalogue === 'vehicle' ? '' : 'text-[#ACC2C6]'}`} htmlFor="vehicle">{currentLocale.vehicleChargeSystemCatalogue}</label>
+          <div onClick={() => setFormData((oldState) => ({...oldState, catalogue: 'evc' }))} className="transition-all flex gap-2 items-start max-w-48 cursor-pointer">
+            <input className={`cursor-pointer ring-0 focus:ring-0 mt-2 bg-[#EFF4F9] border-0 text-[#65D5EF]`} type="radio" name="catalogue" value="evc" checked={formData.catalogue === 'evc'} onChange={handleCatalogueSelect} />
+            <label className={`cursor-pointer transition-all text-base xl:text-lg font-medium ${formData.catalogue === 'evc' ? '' : 'text-[#ACC2C6]'}`} htmlFor="evc">{currentLocale.vehicleChargeSystemCatalogue}</label>
           </div>
           <div onClick={() => setFormData((oldState) => ({...oldState, catalogue: 'family' }))} className="transition-all flex gap-2 items-start max-w-48 cursor-pointer">
             <input className={`cursor-pointer ring-0 focus:ring-0 mt-2 bg-[#EFF4F9] border-0 text-[#65D5EF]`} type="radio" name="catalogue" value="family" checked={formData.catalogue === 'family'} onChange={handleCatalogueSelect} />
@@ -32,13 +42,15 @@ const DownloadCatalogue = ({locale}) => {
         <div className="flex gap-16 mt-10">
           <div onClick={() => setFormData((oldState) => ({...oldState, language: 'tr' }))} className="transition-all flex gap-2 items-start max-w-48 cursor-pointer">
             <input className={`cursor-pointer ring-0 focus:ring-0 mt-2 bg-[#EFF4F9] border-0 text-[#65D5EF]`} type="radio" name="language" value="tr" checked={formData.language === 'tr'} onChange={handleLanguageSelect} />
-            <label className={`cursor-pointer transition-all text-base xl:text-lg font-medium ${formData.language === 'tr' ? '' : 'text-[#ACC2C6]'}`} htmlFor="vehicle">{currentLocale.languageTR}</label>
+            <label className={`cursor-pointer transition-all text-base xl:text-lg font-medium ${formData.language === 'tr' ? '' : 'text-[#ACC2C6]'}`} htmlFor="evc">{currentLocale.languageTR}</label>
           </div>
           <div onClick={() => setFormData((oldState) => ({...oldState, language: 'en' }))} className="transition-all flex gap-2 items-start max-w-48 cursor-pointer">
             <input className={`cursor-pointer ring-0 focus:ring-0 mt-2 bg-[#EFF4F9] border-0 text-[#65D5EF]`} type="radio" name="language" value="en" checked={formData.language === 'en'} onChange={handleLanguageSelect} />
             <label className={`cursor-pointer transition-all text-base xl:text-lg font-medium ${formData.language === 'en' ? '' : 'text-[#ACC2C6]'}`} htmlFor="family">{currentLocale.languageEN}</label>
           </div>
-          <div onClick={() => setFormData((oldState) => ({...oldState, language: 'ru' }))} className="transition-all flex gap-2 items-start max-w-48 cursor-pointer">
+          <div 
+          // onClick={() => setFormData((oldState) => ({...oldState, language: 'ru' }))} 
+          className="transition-all flex gap-2 items-start max-w-48 cursor-not-allowed">
             <input className={`cursor-pointer ring-0 focus:ring-0 mt-2 bg-[#EFF4F9] border-0 text-[#65D5EF]`} type="radio" name="language" value="ru" checked={formData.language === 'ru'} onChange={handleLanguageSelect} />
             <label className={`cursor-pointer transition-all text-base xl:text-lg font-medium ${formData.language === 'ru' ? '' : 'text-[#ACC2C6]'}`} htmlFor="family">{currentLocale.languageRU}</label>
           </div>
@@ -47,6 +59,7 @@ const DownloadCatalogue = ({locale}) => {
           {currentLocale.selectLanguage}
         </p>
         <button
+          onClick={handleDownload}
           className={`transition-all tab-selector bg-sky-300 hover:bg-sky-200 p-2 px-10 xl:px-16 self-center rounded-full mt-14`}
         >
           <h2 className="text-lg xl:text-2xl text-white mb-1">
@@ -60,7 +73,7 @@ const DownloadCatalogue = ({locale}) => {
           alt={'image1'}
           width={3000}
           height={3000}
-          src={formData.catalogue === 'vehicle' ? `/Refs/product-family-sekans.jpg` : '/nicelik.png'}
+          src={formData.catalogue === 'evc' ? `/Refs/product-family-sekans.jpg` : '/nicelik.png'}
           priority
         />
       </div>

@@ -38,7 +38,7 @@ const DescWithSingleImage = ({locale}) => {
   }, [])
   return (
     <div className="flex flex-col md:flex-row gap-4 my-8 mt-28">
-      <div className="flex flex-col mb-8 md:mb-0 ml-4 md:ml-10 xl:ml-20 pr-4 items-center md:w-[45vw] w-full xl:h-[66vh] justify-between">
+      <div className="flex flex-col mb-8 md:mb-0 max-md:px-4 md:ml-10 xl:ml-20 pr-4 items-center md:w-[45vw] w-full xl:h-[66vh] justify-between">
         {pageData.map((data, index) => <div 
           onMouseEnter={() => setCurrentSlide(index)} 
           className={`transition-all ${index === currentSlide ? 'text-[#005770]': 'hidden md:block text-[#ACC2C6]'}`}
