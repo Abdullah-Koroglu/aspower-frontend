@@ -6,18 +6,17 @@ import Dropdown from './Dropdown'
 import { useSearchParams } from 'next/navigation'
 import { usePathname } from 'next/navigation'
 
-function List({ type, locale, pageData }) {
+function List({ type, locale, pageData: parentData }) {
   const searchParams = useSearchParams()
   const category = searchParams.get('category')
   const pathname = usePathname();
 
-  const [pageData, setPageData] = useState(type === 'product' ? productsData : blogsData)
+  const pageData = type === 'product' ? productsData : parentData
   const [isAscharge, setIsAscharge] = useState(false)
 
   const [selectedCategory, setSelectedCategory] = useState('dc-arac-sarj-sistemi')
   const RenderItem = ({ title, image, id, category }) => {
     const imageURL = `${process.env.NEXT_PUBLIC_API_URL}${image?.data?.attributes?.url}`;
-    console.log(imageURL)
     return (
       <Link 
         key={id} 
@@ -48,7 +47,7 @@ function List({ type, locale, pageData }) {
 
     if (locationArray[0] === 'ascharge' || locationArray[1] === 'ascharge') {
       setIsAscharge(true)
-      setPageData(pageData.slice(0, 3));
+      // setPageData(pageData.slice(0, 3));
     }
   }, [])
 
@@ -58,31 +57,47 @@ function List({ type, locale, pageData }) {
         {
           type === 'product' ?
             <div className="md:w-[calc(33%)] 2xl:max-w-[calc(22%-2rem)] overflow-hidden rounded-xl cursor-pointer">
-              <Dropdown isAscharge={isAscharge} data={pageData} setData={setPageData} selectedCategory={selectedCategory} setSelectedCategory={setSelectedCategory} locale={locale} />
+              <Dropdown 
+              isAscharge={isAscharge} 
+              data={
+                pageData.map(category => ({
+                  ...category,
+                  items: parentData.filter(product => product.attributes.Type === category.id).map(item => ({
+                    id: item.attributes.slug,
+                    titleTR: item.attributes.Title,
+                    titleEN: item.attributes.Title
+                  }))
+                }))
+              } 
+              // setData={setPageData} 
+              selectedCategory={selectedCategory} setSelectedCategory={setSelectedCategory} locale={locale} />
             </div>
             : null
         }
         <div className={`${type === 'product' ? 'w-full md:w-[calc(66%)]' : 'w-full'} h-fit flex flex-wrap gap-8`}>
           {
             type === 'product' ?
-              pageData.find(product => product.id === selectedCategory).items.map(item => {
+
+            parentData.filter(product => product.attributes.Type === selectedCategory).map(item => {
                 return (
                   <RenderItem
-                    title={locale === 'tr' ? item.titleTR : item.titleEN}
-                    id={item.id}
+                    title={item.attributes.Title}
+                    id={item.attributes.slug}
                     category={selectedCategory}
-                    image={item.images[0]}
+                    image={item.attributes?.Banner}
                   // image={'/placeholder.png'}
                   />
                 )
-              }) :
+              }) 
+              
+              :
               pageData.map(item => {
-                const {Title, slug, banner} = item.attributes;
+                const {Title, slug, Banner} = item.attributes;
                 return (
                   <RenderItem
                     title={Title}
                     id={slug}
-                    image={banner}
+                    image={Banner}
                   />
                 )
               })
