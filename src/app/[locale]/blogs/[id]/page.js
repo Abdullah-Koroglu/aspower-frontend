@@ -8,7 +8,7 @@ import React from 'react'
 async function page({params}) {
   const {locale, id} = params;
   const currentLocale = locales[locale];
-  const data = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/blogs?filters[slug][$eq]=${params.id}&locale=${params.locale}&populate=Banner`)
+  const data = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/blogs?filters[slug][$eq]=${params.id}&locale=${params.locale}&populate=Banner`)
   const pageData = await data.json()
 
   return (

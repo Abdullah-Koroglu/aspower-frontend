@@ -5,7 +5,7 @@ import locales from '@/locales';
 
 async function page({params}) {
   const {locale} = params;
-  const data = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/blogs?locale=${params.locale}&populate=Banner`)
+  const data = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/blogs?locale=${params.locale}&populate=Banner`)
   const pageData = await data.json()
 
   const currentLocale = locales[locale];

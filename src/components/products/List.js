@@ -16,7 +16,9 @@ function List({ type, locale, pageData: parentData }) {
 
   const [selectedCategory, setSelectedCategory] = useState('dc-arac-sarj-sistemi')
   const RenderItem = ({ title, image, id, category }) => {
-    const imageURL = `${process.env.NEXT_PUBLIC_API_URL}${image?.data?.attributes?.url}`;
+    const imageURL = `${process.env.NEXT_PUBLIC_IMAGE_URL}${image?.data?.attributes?.url}`;
+    console.log(imageURL);
+    
     return (
       <Link 
         key={id} 

@@ -21,7 +21,7 @@ function Detail({ itemData, parentData, type, locale }) {
   const [isAscharge, setIsAscharge] = useState(false)
   const [selectedCategory, setSelectedCategory] = useState('dc-arac-sarj-sistemi');
   const { Title, body, Banner, Images, BodyImages, DataSheet, Type } = itemData.attributes;
-  const imageURL = `${process.env.NEXT_PUBLIC_API_URL}${Banner?.data?.attributes?.url}`;
+  const imageURL = `${process.env.NEXT_PUBLIC_IMAGE_URL}${Banner?.data?.attributes?.url}`;
 
   const pathname = usePathname();
 
@@ -62,10 +62,10 @@ function Detail({ itemData, parentData, type, locale }) {
               }}
               content={body} />
             {BodyImages?.data?.map((image, index) => (
-              <Image key={index} width={1000} height={800} src={ `${process.env.NEXT_PUBLIC_API_URL}${image.attributes.url}`} alt={Title} className="w-full h-auto mt-10 rounded-xl" />
+              <Image key={index} width={1000} height={800} src={ `${process.env.NEXT_PUBLIC_IMAGE_URL}${image.attributes.url}`} alt={Title} className="w-full h-auto mt-10 rounded-xl" />
             ))}
             {
-              DataSheet.data ? <Link target="_blank" rel="noopener noreferrer" href={`${process.env.NEXT_PUBLIC_API_URL}${DataSheet.data?.attributes?.url}`} className="transition-all tab-selector flex bg-sky-300 hover:bg-sky-200 p-2 px-12 rounded-full w-fit mt-10">
+              DataSheet.data ? <Link target="_blank" rel="noopener noreferrer" href={`${process.env.NEXT_PUBLIC_IMAGE_URL}${DataSheet.data?.attributes?.url}`} className="transition-all tab-selector flex bg-sky-300 hover:bg-sky-200 p-2 px-12 rounded-full w-fit mt-10">
                 <h2 className="text-lg xl:text-2xl text-white mb-1 ">{currentLocale.details} {}</h2>
               </Link> : null
             }
