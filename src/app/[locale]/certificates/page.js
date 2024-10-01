@@ -3,14 +3,19 @@ import Banner from '@/components/products/Banner'
 import Link from 'next/link'
 import React from 'react'
 import certificates from '@/data/certificates'
+import { headers } from 'next/headers'
 
 async function page({ params }) {
+  const headersList = headers()
   const { locale } = params
   const currentLocale = locales[locale]
-  // const data = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/certificates?populate=Dokuman`)
-  // const pageData = await data.json()
+  const data = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/certificates?populate=Dokuman`)
+  const pageData = await data.json()
 
-  const pageData = certificates.map((item, index) => ({...item, title: locale === 'tr' ? item.certificateTr : item.certificateEn}))
+  console.log(pageData);
+  
+
+  // const pageData = certificates.map((item, index) => ({...item, title: locale === 'tr' ? item.certificateTr : item.certificateEn}))
 
   return (
     <div>
@@ -19,14 +24,14 @@ async function page({ params }) {
         <div className="flex flex-col h-fit items-start mx-auto max-w-[70rem]">
           <h2 className="text-2xl md:text-5xl sans w-2/3">{currentLocale.certificates}</h2>
           <div className="mt-10 mb-20 flex flex-col">
-            {pageData.filter(item => item.certificateType === 'certificate')?.map((item, index) => (
-              <Link target="_blank" rel="noopener noreferrer" href={`${process.env.BACKEND_URL}${item.documentUrl}`} key={index} className="text-xl font-base mb-4 text-[#005770]">{item.title}</Link>
+            {pageData.data.filter(item => item.attributes.tip === 'sertifika')?.map((item, index) => (
+              <Link target="_blank" rel="noopener noreferrer" href={`${process.env.NEXT_PUBLIC_IMAGE_URL}${item.attributes.Dokuman.data}`} key={index} className="text-xl font-base mb-4 text-[#005770]">{console.log(item.attributes.Dokuman.data.attributes.url)}{item.attributes.Sertifika}</Link>
             ))}
           </div>
           <h2 className="text-2xl md:text-5xl sans w-2/3">{currentLocale.documents}</h2>
           <div className="mt-10 mb-20 flex flex-col">
-            {pageData.filter(item => item.certificateType === 'document')?.map((item, index) => (
-              <Link target="_blank" rel="noopener noreferrer" href={`${process.env.BACKEND_URL}${item.documentUrl}`} key={index} className="text-xl font-base mb-4 text-[#005770]">{item.title}</Link>
+            {pageData.data.filter(item => item.attributes.tip === 'belge')?.map((item, index) => (
+              <Link target="_blank" rel="noopener noreferrer" href={`${process.env.NEXT_PUBLIC_IMAGE_URL}${item.attributes.Dokuman.data}`} key={index} className="text-xl font-base mb-4 text-[#005770]">{console.log(item.attributes.Dokuman.data.attributes.url)}{item.attributes.Sertifika}</Link>
             ))}
           </div>
         </div>
