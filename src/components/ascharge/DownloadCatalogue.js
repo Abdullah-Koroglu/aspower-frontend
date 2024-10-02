@@ -9,8 +9,9 @@ const DownloadCatalogue = ({ locale }) => {
 
   useEffect(() => {
     const fetchData = async () => {
-      const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/catalogues`);
+      const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/catalogues?populate[katalog][populate]=Dosya`);
       const result = await res.json();
+
       setData(result.data);
     };
     fetchData();
@@ -18,7 +19,7 @@ const DownloadCatalogue = ({ locale }) => {
 
   if (!data) return <div>Loading...</div>;
 
-  return <CatalogueSelector data={data} currentLocale={currentLocale} />;
+  return <CatalogueSelector data={data} locale={locale} currentLocale={currentLocale} />;
 };
 
 export default DownloadCatalogue;
