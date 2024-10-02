@@ -12,7 +12,6 @@ async function page({params}) {
   
   const fullData = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/products?locale=${locale}&pagination[pageSize]=100`)
   const pageData = await data.json()
-  console.log(pageData);
   const pageFullData = await fullData.json()
 
   return (

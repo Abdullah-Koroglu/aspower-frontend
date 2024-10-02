@@ -1,14 +1,24 @@
-import locales from '@/locales'
+'use client'
+import { useEffect, useState } from 'react';
+import locales from '@/locales';
 import CatalogueSelector from './CatalogueSelector';
-import { headers } from 'next/headers';
 
-const DownloadCatalogue = async ({locale}) => {
-  const headersList = headers()
-  const currentLocale = locales[locale]
-  const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/catalogues`)
-  const data = await res.json()
+const DownloadCatalogue = ({ locale }) => {
+  const [data, setData] = useState(null);
+  const currentLocale = locales[locale];
 
-  return <CatalogueSelector data={data.data} currentLocale={currentLocale} />
+  useEffect(() => {
+    const fetchData = async () => {
+      const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/catalogues`);
+      const result = await res.json();
+      setData(result.data);
+    };
+    fetchData();
+  }, [locale]); // Fetches data whenever locale changes
+
+  if (!data) return <div>Loading...</div>;
+
+  return <CatalogueSelector data={data} currentLocale={currentLocale} />;
 };
 
 export default DownloadCatalogue;
