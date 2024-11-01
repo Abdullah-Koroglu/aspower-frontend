@@ -635,8 +635,8 @@ const products = [{
   id: 'enerji-depolama',
   href: '/products?category=enerji-depolama',
   image: '/ev.jpg',
-  titleTR: 'Enerji Depolama',
-  titleEN: 'Energy Storage',
+  titleTR: 'Enerji Depolama Sistemleri',
+  titleEN: 'Energy Storage Systems',
   items: [{
     titleTR: 'Ev Tipi Enerji Depolama Çözümleri',
     titleEN: 'Home Energy Storage Solutions',
