@@ -643,9 +643,9 @@ const products = [{
     id: 'ev-tipi-enerji-depolama-cozumleri',
     images: ['/ev.jpg'],
     bodyTR: [
-      { text: 'Aspower, hanelerin elektrik tüketimi ihtiyacını karşılayıp temiz enerji sunan, güvenli ve verimli enerji depolama çözümleri sunar. ', 
-        text: 'Bu sistemler, güneş enerjisi gibi yenilenebilir kaynaklarla birleştirildiğinde elektrik faturalarını düşürmekle kalmaz, aynı zamanda kesintisiz güç kaynağı sağlar. ',
-        text: 'Küçük ve orta ölçekli (3kWh-15kWh arasında kapasitede) kullanım için optimize edilmiştir.'
+      { text: 'Aspower, hanelerin elektrik tüketimi ihtiyacını karşılayıp temiz enerji sunan, güvenli ve verimli enerji depolama çözümleri sunar. ', },
+        {text: 'Bu sistemler, güneş enerjisi gibi yenilenebilir kaynaklarla birleştirildiğinde elektrik faturalarını düşürmekle kalmaz, aynı zamanda kesintisiz güç kaynağı sağlar. ',},
+        {text: 'Küçük ve orta ölçekli (3kWh-15kWh arasında kapasitede) kullanım için optimize edilmiştir.'
       }],
       bodyEN: [
         { text: 'Aspower offers safe and efficient energy storage solutions that meet the electricity consumption needs of households and provide clean energy.'}, 
@@ -661,6 +661,11 @@ const products = [{
         {text: 'Aspower’ın santral tipi depolama sistemleri, büyük ölçekli (2MWh ve üzeri kapasitede enerji ihtiyaçlarını karşılamak amacıyla tasarlanmıştır.' },
         {text: 'Yüksek kapasiteli batarya teknolojisi ve akıllı yönetim sistemleri sayesinde enerji talebine anında cevap verebilir ve şebekeyi dengeleme gibi kritik işlevler (tepe yük azaltması -peak shaving-, yük kaydırması -load shifting-, gerilim/frekans regülasyonu, enerji depolama dengelemesi, vb) sunar. '},
         {text: 'Bu çözümler, özellikle büyük santraller ve enerji dağıtım merkezleri için idealdir.'}
+    ], 
+    bodyEN: [
+        {text: 'Aspower\'s plant-type storage systems are designed to meet large-scale energy needs (2MWh and above capacity).'}, 
+        {text: 'Thanks to high-capacity battery technology and smart management systems, it can respond instantly to energy demand and provide critical functions such as balancing the grid (peak load reduction, load shifting, voltage/frequency regulation, energy storage balancing, etc.)'}, 
+        {text: 'These solutions are ideal for large power plants and energy distribution centers.'}
     ]
   }, {
     titleTR: 'Carport Depolama Çözümleri',
@@ -671,6 +676,11 @@ const products = [{
       {text: 'Aspower\'ın Carport depolama çözümleri, güneş panelleri ile entegre bir şekilde çalışarak otopark alanlarında güneş enerjisini depolar. '},
       {text: 'Elektrikli araç şarj istasyonları ile uyumlu hale gelen bu sistemler, araç sahiplerine temiz enerjiyle araçlarını şarj etme imkânı sunar. '},
       {text: 'Ayrıca, Aspower\'ın sahip olduğu EV şarj sistemlerinden gelen tecrübe ile uzaktan izleme ve modüler çözümler sayesinde otopark işletmecilerine sürdürülebilir bir gelir kaynağı sağlar. '},
+    ], 
+    bodyEN: [
+      {text: 'Aspower\'s Carport storage solutions store solar energy in parking areas by working in an integrated way with solar panels.'}, 
+      {text: 'These systems, which are compatible with electric vehicle charging stations, allow vehicle owners to charge their vehicles with clean energy.'}, 
+      {text: 'In addition, with the experience from Aspower\'s EV charging systems, it provides parking operators with a sustainable income source through remote monitoring and modular solutions.'}
     ]
   }, {
     titleTR: 'Mobil Depolamalı Çözümler',
@@ -681,6 +691,11 @@ const products = [{
       {text: 'Aspower mobil enerji depolama çözümleri, çeşitli geçici enerji ihtiyaçlarını karşılamak için tasarlanmıştır. '},
       {text: 'Özellikle yol yardım hizmetlerinde veya acil enerji gereksinimlerinde kullanılmak üzere taşınabilir, güçlü ve hızlı şarj özellikleriyle donatılmıştır. '},
       {text: 'Hafif ve modüler yapısıyla hızlı bir şekilde kurulum ve taşıma imkânı sunar.'},
+    ], 
+    bodyEN: [
+      {text: 'Aspower\'s mobile energy storage solutions are designed to meet various temporary energy needs.'}, 
+      {text: 'Especially designed for use in road assistance services or emergency energy requirements, it is portable, powerful, and equipped with fast charging features.'}, 
+      {text: 'With its lightweight and modular structure, it offers quick installation and transportation.'}
     ]
   }]
 },
