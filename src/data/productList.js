@@ -632,6 +632,59 @@ const products = [{
   ]
 },
 {
+  id: 'enerji-depolama',
+  href: '/products?category=enerji-depolama',
+  image: '/ev.jpg',
+  titleTR: 'Enerji Depolama',
+  titleEN: 'Energy Storage',
+  items: [{
+    titleTR: 'Ev Tipi Enerji Depolama Çözümleri',
+    titleEN: 'Home Energy Storage Solutions',
+    id: 'ev-tipi-enerji-depolama-cozumleri',
+    images: ['/ev.jpg'],
+    bodyTR: [
+      { text: 'Aspower, hanelerin elektrik tüketimi ihtiyacını karşılayıp temiz enerji sunan, güvenli ve verimli enerji depolama çözümleri sunar. ', 
+        text: 'Bu sistemler, güneş enerjisi gibi yenilenebilir kaynaklarla birleştirildiğinde elektrik faturalarını düşürmekle kalmaz, aynı zamanda kesintisiz güç kaynağı sağlar. ',
+        text: 'Küçük ve orta ölçekli (3kWh-15kWh arasında kapasitede) kullanım için optimize edilmiştir.'
+      }],
+      bodyEN: [
+        { text: 'Aspower offers safe and efficient energy storage solutions that meet the electricity consumption needs of households and provide clean energy.'}, 
+          {text: 'When combined with renewable sources such as solar energy, these systems not only reduce electricity bills but also provide uninterrupted power supply.'}, 
+          {text: 'Optimized for small and medium scale (capacity between 3kWh-15kWh) use.'}
+      ]
+  },{
+    titleTR: 'Santral Tipi Depolama Çözümleri',
+    titleEN: 'Plant Type Storage Solutions',
+    id: 'santral-tipi-depolama-cozumleri',
+    images: ['/santral.jpg'],
+    bodyTR: [
+        {text: 'Aspower’ın santral tipi depolama sistemleri, büyük ölçekli (2MWh ve üzeri kapasitede enerji ihtiyaçlarını karşılamak amacıyla tasarlanmıştır.' },
+        {text: 'Yüksek kapasiteli batarya teknolojisi ve akıllı yönetim sistemleri sayesinde enerji talebine anında cevap verebilir ve şebekeyi dengeleme gibi kritik işlevler (tepe yük azaltması -peak shaving-, yük kaydırması -load shifting-, gerilim/frekans regülasyonu, enerji depolama dengelemesi, vb) sunar. '},
+        {text: 'Bu çözümler, özellikle büyük santraller ve enerji dağıtım merkezleri için idealdir.'}
+    ]
+  }, {
+    titleTR: 'Carport Depolama Çözümleri',
+    titleEN: 'Carport Storage Solutions',
+    id: 'carport-depolama-cozumleri',
+    images: ['/carot.jpg'],
+    bodyTR: [
+      {text: 'Aspower\'ın Carport depolama çözümleri, güneş panelleri ile entegre bir şekilde çalışarak otopark alanlarında güneş enerjisini depolar. '},
+      {text: 'Elektrikli araç şarj istasyonları ile uyumlu hale gelen bu sistemler, araç sahiplerine temiz enerjiyle araçlarını şarj etme imkânı sunar. '},
+      {text: 'Ayrıca, Aspower\'ın sahip olduğu EV şarj sistemlerinden gelen tecrübe ile uzaktan izleme ve modüler çözümler sayesinde otopark işletmecilerine sürdürülebilir bir gelir kaynağı sağlar. '},
+    ]
+  }, {
+    titleTR: 'Mobil Depolamalı Çözümler',
+    titleEN: 'Mobile Storage Solutions',
+    id: 'mobil-depolamali-cozumler',
+    images: ['/mobil.jpg'],
+    bodyTR: [
+      {text: 'Aspower mobil enerji depolama çözümleri, çeşitli geçici enerji ihtiyaçlarını karşılamak için tasarlanmıştır. '},
+      {text: 'Özellikle yol yardım hizmetlerinde veya acil enerji gereksinimlerinde kullanılmak üzere taşınabilir, güçlü ve hızlı şarj özellikleriyle donatılmıştır. '},
+      {text: 'Hafif ve modüler yapısıyla hızlı bir şekilde kurulum ve taşıma imkânı sunar.'},
+    ]
+  }]
+},
+{
   id: 'ozel-cozumler',
   href: '/products?category=ozel-cozumler',
   image: '/products/ozel-cozumler.jpg',

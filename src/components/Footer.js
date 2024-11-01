@@ -47,8 +47,8 @@ export default function Footer({ locale }) {
             </p>
 
             {
-              products.filter(category => category.passive !== true).map((product, index) => {
-                return <Link key={index} href={product.href}>
+              products.map((product, index) => {
+                return <Link key={index} href={product.passive !== true ? product.href : ''}>
                   <p className="w-fit hover:text-white">
                     {locale === 'tr' ? product.titleTR : product.titleEN}
                   </p>

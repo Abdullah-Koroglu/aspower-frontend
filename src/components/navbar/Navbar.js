@@ -97,7 +97,8 @@ const Navbar = ({ locale }) => {
                       type === 'products' ? <>
                         {index === 0 && <div className="text-[#005770] font-bold">{currentLocale.electric_vehicle_charging_systems}</div>}
                         {index === 3 && <div className="text-[#005770] font-bold">{currentLocale.powerElectronics}</div>}
-                        {index === 9 && <div className="text-[#005770] font-bold">{currentLocale.special_solutions}</div>}
+                        {index === 9 && <div className="text-[#005770] font-bold">{currentLocale.energy_storage}</div>}
+                        {index === 10 && <div className="text-[#005770] font-bold">{currentLocale.special_solutions}</div>}
                       </> : null
                     }
                     <Link
