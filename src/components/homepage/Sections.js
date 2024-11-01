@@ -18,7 +18,7 @@ const Sections = ({locale}) => {
     },
     {
       id: 2,
-      href: '/products?category=redresor-aku-sarj-cihazi',
+      href: '/products?category=enerji-depolama',
       attributes: {
         width: 1200,
         height: 800,
