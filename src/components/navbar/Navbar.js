@@ -181,11 +181,11 @@ const Navbar = ({ locale }) => {
           >
             {currentLocale.contact}
           </div>
-          <div>
+          <Link className="cursor-pointer xl:px-8 transition-all z-50 p-1 rounded-full hover:bg-white hover:text-[#005770]" href={'tel:08504743562'}>
             <p>
               Teknik Servis Çağrı Hizmetleri: 0850 474 35 62
             </p>
-          </div>
+          </Link>
         </div>
         <div className={`hidden md:flex gap-2 items-center text-white ${isMenuOpen ? 'flex flex-col mt-4' : ''}`}>
           <div className="flex ">
@@ -256,10 +256,7 @@ const Navbar = ({ locale }) => {
           <Link className="bg-gray-200 rounded-full p-2" href="https://x.com/AspowerEnerji">
             <FaXTwitter className='text-black' />
           </Link>
-          <Link className="bg-gray-200 rounded-full p-2" href={
-            // 'https://api.whatsapp.com/send?phone=905511086483'
-            ''
-          }>
+          <Link className="bg-gray-200 rounded-full p-2" href={'tel:08504743562'}>
             <FaWhatsapp className='text-black' />
           </Link>
         </div>
