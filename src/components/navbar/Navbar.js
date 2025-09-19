@@ -181,6 +181,11 @@ const Navbar = ({ locale }) => {
           >
             {currentLocale.contact}
           </div>
+          <div>
+            <p>
+              Teknik Servis Çağrı Hizmetleri: 0850 474 35 62
+            </p>
+          </div>
         </div>
         <div className={`hidden md:flex gap-2 items-center text-white ${isMenuOpen ? 'flex flex-col mt-4' : ''}`}>
           <div className="flex ">
@@ -230,6 +235,14 @@ const Navbar = ({ locale }) => {
         }}>
           {currentLocale.contact}
         </div>
+        <div className="w-full py-2 cursor-pointer" onClick={() => {
+          // open phone call
+          window.location.href = 'tel:08504743562';
+        }}>
+            <p className="text-gray-500">
+              Teknik Servis Çağrı Hizmetleri: 0850 474 35 62
+            </p>
+          </div>
         <div className="flex justify-center gap-4 py-4 mt-auto">
           <Link className="bg-gray-200 rounded-full p-2" href="https://www.facebook.com/profile.php?id=100065641653248">
             <FaFacebookF className='text-black' />
